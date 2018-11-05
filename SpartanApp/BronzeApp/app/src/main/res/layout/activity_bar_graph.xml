@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/profile"
+        android:scaleType="fitXY"
+        />
+
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32dp"
+            android:textColor="@color/white"
+            android:text="Nicole James"
+            android:paddingLeft="16dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="52dp"
+
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/menu"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/search"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="195dp"
+            android:src="@drawable/filter"
+            android:layout_gravity="right"
+            android:layout_marginRight="22dp"
+
+
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <customfonts.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textColor="@color/FormTextColor"
+        android:text="FEBRUARY"
+        android:paddingLeft="16dp"
+
+        />
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/lightTextColor"
+            android:text="2015"
+            android:paddingLeft="16dp"
+
+
+            />
+    </LinearLayout>
+
+
+
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card5"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+       android:layout_marginTop="16dp"
+        card_view:cardCornerRadius="@dimen/card_view_roundcorner"
+        card_view:cardBackgroundColor="#ffffff">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/card_toolbar_grey" android:id="@+id/chart_toolbar"/>
+
+            <RelativeLayout
+                android:id="@+id/legend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chart_toolbar">
+                <!--<TextView-->
+                    <!--android:id="@+id/state_one"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toLeftOf="@+id/state_two"-->
+                    <!--android:layout_toStartOf="@+id/state_two"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:drawableLeft="@drawable/stacked_one_point1_bck"-->
+                    <!--android:drawableStart="@drawable/stacked_one_point1_bck"-->
+                    <!--android:drawablePadding="4dp"-->
+                    <!--android:text="@string/stacked_one_1"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="#ff2b2b2b"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/state_two"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:drawableLeft="@drawable/stacked_one_point2_bck"-->
+                    <!--android:drawableStart="@drawable/stacked_one_point2_bck"-->
+                    <!--android:drawablePadding="4dp"-->
+                    <!--android:text="@string/stacked_one_2"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="#ff2b2b2b"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/state_three"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@+id/state_two"-->
+                    <!--android:layout_toEndOf="@+id/state_two"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:drawableLeft="@drawable/stacked_one_point3_bck"-->
+                    <!--android:drawableStart="@drawable/stacked_one_point3_bck"-->
+                    <!--android:drawablePadding="4dp"-->
+                    <!--android:text="@string/stacked_one_3"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="#ff2b2b2b"/>-->
+            </RelativeLayout>
+            <com.db.chart.view.StackBarChartView
+                xmlns:chart="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/chart5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_below="@+id/legend"
+                android:layout_alignParentBottom="true"
+                chart:chart_labelColor="#929b88"
+                chart:chart_fontSize="10sp"
+                android:layout_margin="8dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="26dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+
+            <customfonts.MyTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28dp"
+                android:textColor="@color/darkTextColor"
+                android:text="57"
+                android:layout_gravity="center"/>
+
+            <customfonts.MyTextView
+                android:id="@+id/sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/lightTextColor"
+                android:text="COMPLETED"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="22dp"
+                android:layout_height="3dp"
+                android:background="#faa75b"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"      ></LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <customfonts.MyTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28dp"
+                android:textColor="@color/darkTextColor"
+                android:text="19"
+                android:layout_gravity="center"/>
+
+            <customfonts.MyTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/lightTextColor"
+                android:text="SNOOZED"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+
+                android:layout_width="22dp"
+                android:layout_height="3dp"
+                android:background="#8284ab"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"      ></LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <customfonts.MyTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28dp"
+                android:textColor="@color/darkTextColor"
+                android:text="4"
+                android:layout_gravity="center"/>
+
+            <customfonts.MyTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/lightTextColor"
+                android:text="OVERDUE"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+
+                android:layout_width="22dp"
+                android:layout_height="3dp"
+                android:background="#ff527d"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"      ></LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

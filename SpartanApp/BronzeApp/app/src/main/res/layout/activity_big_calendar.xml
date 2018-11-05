@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="195dp">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/grid_header_bg"
+            android:scaleType="fitXY"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/back"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/next"
+                        android:layout_marginRight="16dp"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/search"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="February"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="22dp"/>
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2015"
+                    android:textColor="@color/dullWhite"
+                    android:textSize="30dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="22dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            >
+
+
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:text="DAY"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:text="WEEK"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+            <customfonts.MyTextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:text="MONTH"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="fill_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="240dp"
+      android:layout_marginTop="16dp"
+        app:compactCalendarTextSize="12sp"
+        app:compactCalendarBackgroundColor="@color/white"
+        app:compactCalendarTextColor="@color/FormTextColor"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/dullWhite"
+        app:compactCalendarCurrentDayBackgroundColor="@color/dullWhite"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/listlayoutDivider"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingBottom="12dp"
+            android:paddingRight="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/tomcruise"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="Call with Ryan"
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="2 Pm"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/sunny"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="Lunch with Diance"
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="1 Pm     Reaturant"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/skarlet"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="Catch up with Tom"
+
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="11 12 pm   Hangoutss"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/sunny1"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="New Subpage for Jenet"
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="8:10   am"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/sunny2"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="Walk with Marry"
+
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="8 Pm   City Park"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ileana"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="Dance with Hritik"
+
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="3 Am     Reaturant"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/jennifer"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="Marry with with Ileana"
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="1 6 pm   Marryland"
+
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp">
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/prity"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="#cccccc"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/FormTextColor"
+                    android:text="Go wih katerina"
+                    />
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/lightTextColor"
+                    android:text="8:18   am"
+                    android:layout_marginTop="4dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/formDivider"></LinearLayout>
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add"
+    android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+     android:layout_margin="22dp"
+
+
+        />
+
+
+</RelativeLayout>

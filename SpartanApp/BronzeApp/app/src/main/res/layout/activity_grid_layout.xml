@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="195dp">
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="195dp"
+      android:src="@drawable/grid_header_bg"
+      android:scaleType="fitXY"
+      />
+
+
+    <customfonts.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Groups"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:layout_margin="16dp"/>
+
+  </FrameLayout>
+
+  <GridView
+      android:id="@+id/gridList"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:numColumns="2"
+      ></GridView>
+</LinearLayout>
