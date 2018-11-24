@@ -4,18 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
-android:background="#fff"
-
-
-    >
+    android:background="#fff">
 
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
+        android:layout_height="match_parent">
 
 
     <android.support.v4.widget.DrawerLayout
@@ -61,8 +56,7 @@ android:background="#fff"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
-           >
+            android:background="#fff">
 
 
 
@@ -71,10 +65,7 @@ android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-android:layout_below="@+id/toolbar"
-
-          >
-
+            android:layout_below="@+id/toolbar">
 
 
 

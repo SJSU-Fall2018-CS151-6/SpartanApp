@@ -31,6 +31,7 @@
 
 
         <EditText
+            android:id="@+id/textInputNewID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
@@ -50,6 +51,7 @@
 
 
         <EditText
+            android:id="@+id/textInputNewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -70,6 +72,7 @@
 
 
         <EditText
+            android:id="@+id/textInputNewPWD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -89,6 +92,7 @@
 
 
         <EditText
+            android:id="@+id/textInputNewBirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Birthday"
@@ -106,14 +110,6 @@
             android:layout_height="0.5dp"
             android:background="@color/divider"></LinearLayout>
 
-
-
-
-
-
-
-
-
     </LinearLayout>
 
 
@@ -128,9 +124,10 @@
 
 
         <TextView
+            android:onClick="signUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="Sign Up"
 
             android:background="@color/blue"
             android:padding="20dp"
@@ -138,39 +135,6 @@
             android:layout_gravity="center"
             android:gravity="center"
             />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:layout_gravity="center"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Don't have an account ?"
-
-                android:textColor="@color/dullWhite"
-                android:layout_gravity="center"
-                android:gravity="center"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="  Sign Up"
-
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                android:gravity="center"
-                />
-
-
-        </LinearLayout>
 
     </LinearLayout>
 
