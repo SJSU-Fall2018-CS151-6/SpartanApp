@@ -1,4 +1,4 @@
-package com.wolfsoft.one.bronzeapp;
+package com.wolfsoft.one.bronzeapp.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.wolfsoft.one.bronzeapp.R;
+import com.wolfsoft.one.bronzeapp.calendar.HorizontalCalendarActivity;
 import com.wolfsoft.one.bronzeapp.database.DBHandler;
 
 public class LoginActivity extends AppCompatActivity {
@@ -35,9 +37,11 @@ public class LoginActivity extends AppCompatActivity {
         CharSequence user = inputID.getText();
 
         if(dbHandler.precedeLogin(user.toString(), pwd.toString())){
-            Toast.makeText(this, user+" "+pwd+" exists", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), HorizontalCalendarActivity.class);
+
+            startActivity(intent);
         }else{
-            Toast.makeText(this, user+" "+pwd+" do not exist", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "username or password are wrong", Toast.LENGTH_LONG).show();
         }
     }
 }

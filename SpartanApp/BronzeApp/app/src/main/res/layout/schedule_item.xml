@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/listlayoutDivider"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:padding="12dp">
+
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/lectureImage"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/tomcruise"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp">
+
+            <customfonts.MyTextView
+                android:id="@+id/lectureName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/FormTextColor"
+                android:text="Call with Ryan"
+                />
+
+            <customfonts.MyTextView
+                android:id="@+id/lectureTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/lightTextColor"
+                android:text="2 Pm"
+                android:layout_marginTop="4dp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -14,7 +14,8 @@
 
     <com.wolfsoft.one.bronzeapp.StickyScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
 
     <LinearLayout
@@ -65,6 +66,7 @@
 
 
             <ImageView
+                android:onClick="logOut"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/login"/>
@@ -80,9 +82,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="22dp"
                 android:textColor="@color/white"
-                android:text="Good Morning !"
-                android:paddingLeft="16dp"
-            android:layout_gravity="center"
+                android:text="Firstname Lastname"
+                android:layout_gravity="center"
                 android:layout_marginTop="16dp"
 
                 />
@@ -158,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
                 android:textColor="@color/white"
-                android:text="FEBRUARY"
+                android:text="Fall 2018"
                 android:layout_gravity="center"
                 android:gravity="center"
                 />
@@ -178,9 +179,7 @@
     </FrameLayout>
 
 
-
-
-        <solar.blaz.date.week.WeekDatePicker
+       <!-- <solar.blaz.date.week.WeekDatePicker
             android:id="@+id/date_picker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -193,10 +192,15 @@
             app:wdp_dayBackground="@color/calanderBg"
             app:wdp_firstDayOfWeek="monday"
             android:background="@color/calanderBg"
-            />
+            />-->
 
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Weekly Schedule"
+            android:padding="12dp"
+            android:background="@color/calanderBg"/>
 
 
         <LinearLayout
@@ -205,7 +209,7 @@
             android:background="@color/listlayoutDivider"></LinearLayout>
 
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -675,9 +679,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/formDivider"></LinearLayout>
+            android:background="@color/formDivider"></LinearLayout>-->
 
-
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scheduleListView"
+                android:layout_gravity="top"/>
+        </LinearLayout>
 
 
 
@@ -692,7 +705,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="22dp"
-
+        android:onClick="addNewLecture"
 
         />
 

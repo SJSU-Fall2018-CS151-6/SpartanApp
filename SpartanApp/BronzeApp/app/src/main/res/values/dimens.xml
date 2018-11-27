@@ -8,7 +8,6 @@
     <dimen name="btnLabel">16dp</dimen>
 
 
-
     <dimen name="card_toolbar_btn">40dp</dimen>
 
     <dimen name="card_view_padding">1dp</dimen>
@@ -36,6 +35,7 @@
     <!-- BarChartView -->
     <dimen name="bar_spacing">6dp</dimen>
     <dimen name="set_spacing">3dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 
 </resources>

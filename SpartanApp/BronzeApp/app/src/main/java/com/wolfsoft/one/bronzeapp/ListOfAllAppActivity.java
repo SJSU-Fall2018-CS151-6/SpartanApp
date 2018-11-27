@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.wolfsoft.one.bronzeapp.calendar.HorizontalCalendarActivity;
+import com.wolfsoft.one.bronzeapp.login.LoginActivity;
+import com.wolfsoft.one.bronzeapp.login.SignUpActivity;
+
 import java.util.ArrayList;
 
 public class ListOfAllAppActivity extends AppCompatActivity {

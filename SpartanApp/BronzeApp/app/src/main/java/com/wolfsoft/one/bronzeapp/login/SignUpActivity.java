@@ -1,10 +1,11 @@
-package com.wolfsoft.one.bronzeapp;
+package com.wolfsoft.one.bronzeapp.login;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.wolfsoft.one.bronzeapp.R;
 import com.wolfsoft.one.bronzeapp.database.DBHandler;
 
 public class SignUpActivity extends AppCompatActivity {
