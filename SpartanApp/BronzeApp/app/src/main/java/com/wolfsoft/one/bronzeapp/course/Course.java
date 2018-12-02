@@ -1,4 +1,4 @@
-package com.wolfsoft.one.bronzeapp.calendar;
+package com.wolfsoft.one.bronzeapp.course;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -7,17 +7,15 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.wolfsoft.one.bronzeapp.R;
 
-
-public class Lecture {
+public class Course {
     String name;
     String time;
     String room;
     String teacherName;
     Drawable image;
 
-    public Lecture(String name, String time, String room, String teacherName, Drawable image) {
+    public Course(String name, String time, String room, String teacherName, Drawable image) {
         this.name = name;
         this.time = time;
         this.room = room;
@@ -25,7 +23,7 @@ public class Lecture {
         this.image = image;
     }
 
-    public Lecture(Integer i) {
+    public Course(Integer i) {
         this.name = "lecture"+Integer.toString(i);
         this.time = "some time";
         this.room = "some room";

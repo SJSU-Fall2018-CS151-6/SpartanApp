@@ -9,11 +9,12 @@ import android.widget.Toast;
 
 import com.wolfsoft.one.bronzeapp.login.Credentials;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class DBHandler implements Runnable{
+public class DBHandler implements Runnable, Serializable {
 
     private Context context;
     private SQLiteDatabase databaseWrite;
@@ -26,7 +27,6 @@ public class DBHandler implements Runnable{
     }
 
     public void newUser(String name, String email, String password, String birthday) {
-
 
         ContentValues values = new ContentValues();
         values.put(DBConfig.UserData.NAME, name);

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.wolfsoft.one.bronzeapp.calendar.HorizontalCalendarActivity;
+import com.wolfsoft.one.bronzeapp.course.CourseSchedule;
 import com.wolfsoft.one.bronzeapp.login.LoginActivity;
 import com.wolfsoft.one.bronzeapp.login.SignUpActivity;
 
@@ -114,7 +114,7 @@ public class ListOfAllAppActivity extends AppCompatActivity {
 
             case 5 :
 
-                it = new Intent(ListOfAllAppActivity.this, HorizontalCalendarActivity.class);
+                it = new Intent(ListOfAllAppActivity.this, CourseSchedule.class);
                 startActivity(it);
 
 

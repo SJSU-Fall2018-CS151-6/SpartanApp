@@ -1,23 +1,21 @@
-package com.wolfsoft.one.bronzeapp.calendar;
+package com.wolfsoft.one.bronzeapp.course;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.wolfsoft.one.bronzeapp.R;
 import com.wolfsoft.one.bronzeapp.login.Credentials;
-import com.wolfsoft.one.bronzeapp.login.SignUpActivity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class HorizontalCalendarActivity extends AppCompatActivity {
+public class CourseSchedule extends AppCompatActivity implements Serializable {
 
-    ArrayList<Lecture> list = new ArrayList<>();
+    ArrayList<Course> list = new ArrayList<>();
     ListView listView;
     ScheduleListAdapter adapter;
 
@@ -39,7 +37,7 @@ public class HorizontalCalendarActivity extends AppCompatActivity {
 
     public void addNewLecture(View v){
 
-        Intent intent = new Intent(getApplicationContext(), LectureSelector.class);
+        Intent intent = new Intent(getApplicationContext(), CourseSelector.class);
 
         startActivityForResult(intent, 11);
 
@@ -54,8 +52,8 @@ public class HorizontalCalendarActivity extends AppCompatActivity {
                     String returnValue = data.getStringExtra("lectureIndex");
 
                     AvailableCourses courses = new AvailableCourses(this);
-                    Lecture lecture = courses.getIndexOf(Integer.parseInt(returnValue));
-                    adapter.add(lecture);
+                    Course course = courses.getIndexOf(Integer.parseInt(returnValue));
+                    adapter.add(course);
                     adapter.notifyDataSetChanged();
                 }
 

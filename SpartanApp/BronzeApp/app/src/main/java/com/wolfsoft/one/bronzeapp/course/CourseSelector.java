@@ -1,22 +1,17 @@
-package com.wolfsoft.one.bronzeapp.calendar;
+package com.wolfsoft.one.bronzeapp.course;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.wolfsoft.one.bronzeapp.R;
 
 import java.util.ArrayList;
 
-public class LectureSelector extends AppCompatActivity {
+public class CourseSelector extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +22,7 @@ public class LectureSelector extends AppCompatActivity {
 
         AvailableCourses courses = new AvailableCourses(this);
 
-        final ArrayList<Lecture> list = courses.getLectures();
+        final ArrayList<Course> list = courses.getCourses();
 
         ScheduleListAdapter adapter = new ScheduleListAdapter(list,this);
 

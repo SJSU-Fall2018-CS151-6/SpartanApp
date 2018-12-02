@@ -1,25 +1,21 @@
-package com.wolfsoft.one.bronzeapp.calendar;
+package com.wolfsoft.one.bronzeapp.course;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.wolfsoft.one.bronzeapp.R;
 
-import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 
-public class ScheduleListAdapter extends ArrayAdapter<Lecture> implements View.OnClickListener{
+public class ScheduleListAdapter extends ArrayAdapter<Course> implements View.OnClickListener{
 
-        private ArrayList<Lecture> dataSet;
+        private ArrayList<Course> dataSet;
         Context mContext;
 
         // View lookup cache
@@ -32,7 +28,7 @@ public class ScheduleListAdapter extends ArrayAdapter<Lecture> implements View.O
             ImageView imageView;
         }
 
-        public ScheduleListAdapter(ArrayList<Lecture> data, Context context) {
+        public ScheduleListAdapter(ArrayList<Course> data, Context context) {
             super(context, R.layout.schedule_item, data);
             this.dataSet = data;
             this.mContext=context;
@@ -44,13 +40,13 @@ public class ScheduleListAdapter extends ArrayAdapter<Lecture> implements View.O
 
             int position = (Integer) v.getTag();
             Object object = getItem(position);
-            Lecture dataModel = (Lecture) object;
+            Course dataModel = (Course) object;
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             // Get the data item for this position
-            Lecture lecture = getItem(position);
+            Course course = getItem(position);
 
             // Check if an existing view is being reused, otherwise inflate the view
             ViewHolder viewHolder = new ViewHolder();; // view lookup cache stored in tag
@@ -69,12 +65,12 @@ public class ScheduleListAdapter extends ArrayAdapter<Lecture> implements View.O
 
             convertView.setTag(viewHolder);
 
-            Log.e("adapter", lecture.getName());
-            viewHolder.textViewName.setText(lecture.getName());
-            viewHolder.textViewTime.setText(lecture.getTime());
-            viewHolder.textViewRoom.setText(lecture.getRoom());
-            viewHolder.textViewTeacher.setText(lecture.getTeacherName());
-            viewHolder.imageView.setImageDrawable(lecture.getImage());
+            Log.e("adapter", course.getName());
+            viewHolder.textViewName.setText(course.getName());
+            viewHolder.textViewTime.setText(course.getTime());
+            viewHolder.textViewRoom.setText(course.getRoom());
+            viewHolder.textViewTeacher.setText(course.getTeacherName());
+            viewHolder.imageView.setImageDrawable(course.getImage());
 
             return convertView;
         }
