@@ -26,6 +26,9 @@ public class ScheduleListAdapter extends ArrayAdapter<Lecture> implements View.O
         private static class ViewHolder {
             TextView textViewName;
             TextView textViewTime;
+            TextView textViewRoom;
+            TextView textViewTeacher;
+
             ImageView imageView;
         }
 
@@ -52,9 +55,6 @@ public class ScheduleListAdapter extends ArrayAdapter<Lecture> implements View.O
             // Check if an existing view is being reused, otherwise inflate the view
             ViewHolder viewHolder = new ViewHolder();; // view lookup cache stored in tag
 
-
-            Drawable myIcon = getContext().getResources().getDrawable(R.drawable.tomcruise);
-
             if (convertView == null) {
                 LayoutInflater inflater = LayoutInflater.from(getContext());
                 convertView = inflater.inflate(R.layout.schedule_item, parent, false);
@@ -63,14 +63,18 @@ public class ScheduleListAdapter extends ArrayAdapter<Lecture> implements View.O
 
             viewHolder.textViewName = (TextView) convertView.findViewById(R.id.lectureName);
             viewHolder.textViewTime = (TextView) convertView.findViewById(R.id.lectureTime);
+            viewHolder.textViewRoom = (TextView) convertView.findViewById(R.id.lectureRoom);
+            viewHolder.textViewTeacher = (TextView) convertView.findViewById(R.id.lectureTeacher);
             viewHolder.imageView = (ImageView) convertView.findViewById(R.id.lectureImage);
 
             convertView.setTag(viewHolder);
 
-            Log.e("adapter", lecture.name);
-            viewHolder.textViewName.setText(lecture.name);
-            viewHolder.textViewTime.setText("heute");
-            viewHolder.imageView.setImageDrawable(myIcon);
+            Log.e("adapter", lecture.getName());
+            viewHolder.textViewName.setText(lecture.getName());
+            viewHolder.textViewTime.setText(lecture.getTime());
+            viewHolder.textViewRoom.setText(lecture.getRoom());
+            viewHolder.textViewTeacher.setText(lecture.getTeacherName());
+            viewHolder.imageView.setImageDrawable(lecture.getImage());
 
             return convertView;
         }

@@ -25,13 +25,11 @@ public class LectureSelector extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.listAvailableLectures);
 
-        final ArrayList<String> list = new ArrayList<>();
-        list.add("lecture1");
-        list.add("lecture2");
-        list.add("lecture3");
-        list.add("lecture4");
+        AvailableCourses courses = new AvailableCourses(this);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
+        final ArrayList<Lecture> list = courses.getLectures();
+
+        ScheduleListAdapter adapter = new ScheduleListAdapter(list,this);
 
         listView.setAdapter(adapter);
 
@@ -41,7 +39,7 @@ public class LectureSelector extends AppCompatActivity {
 
                 Intent resultIntent = new Intent();
 
-                resultIntent.putExtra("lecture",  list.get(i));
+                resultIntent.putExtra("lectureIndex", Integer.toString(i));
                 setResult(i, resultIntent);
                 finish();
             }

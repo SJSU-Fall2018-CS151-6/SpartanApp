@@ -6,9 +6,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wolfsoft.one.bronzeapp.R;
+import com.wolfsoft.one.bronzeapp.login.Credentials;
 import com.wolfsoft.one.bronzeapp.login.SignUpActivity;
 
 import java.util.ArrayList;
@@ -30,6 +32,9 @@ public class HorizontalCalendarActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        TextView textView = (TextView) findViewById(R.id.userName);
+
+        textView.setText(Credentials.getUserName());
     }
 
     public void addNewLecture(View v){
@@ -46,10 +51,10 @@ public class HorizontalCalendarActivity extends AppCompatActivity {
         switch(requestCode) {
             case (11) : {
                 if(data != null ){
-                    String returnValue = data.getStringExtra("lecture");
-                    Toast.makeText(getApplicationContext(), returnValue, Toast.LENGTH_LONG).show();
-                    Lecture lecture = new Lecture();
-                    lecture.name = returnValue;
+                    String returnValue = data.getStringExtra("lectureIndex");
+
+                    AvailableCourses courses = new AvailableCourses(this);
+                    Lecture lecture = courses.getIndexOf(Integer.parseInt(returnValue));
                     adapter.add(lecture);
                     adapter.notifyDataSetChanged();
                 }

@@ -7,19 +7,26 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.wolfsoft.one.bronzeapp.login.Credentials;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
-public class DBHandler {
+public class DBHandler implements Runnable{
 
     private Context context;
+    private SQLiteDatabase databaseWrite;
+    private SQLiteDatabase databaseRead;
 
     public DBHandler(Context context){
         this.context = context;
+        Thread thread = new Thread(this);
+        thread.start();
     }
 
     public void newUser(String name, String email, String password, String birthday) {
-        SQLiteDatabase database = new DBHelper(context).getWritableDatabase();
+
 
         ContentValues values = new ContentValues();
         values.put(DBConfig.UserData.NAME, name);
@@ -37,17 +44,18 @@ public class DBHandler {
             Toast.makeText(context, "Date is in the wrong format", Toast.LENGTH_LONG).show();
             return;
         }
-        long newRowId = database.insert(DBConfig.UserData.TABLE_NAME, null, values);
+        long newRowId = databaseWrite.insert(DBConfig.UserData.TABLE_NAME, null, values);
 
-        Toast.makeText(context, "The new Row Id is " + newRowId, Toast.LENGTH_LONG).show();
+        Log.e("NewDBElement", "The new Row Id is " + newRowId);
     }
 
 
     public Boolean precedeLogin(String name, String password) {
 
-        SQLiteDatabase database = new DBHelper(context).getReadableDatabase();
-
         String[] projection = {
+                DBConfig.UserData.NAME,
+                DBConfig.UserData.EMAIL,
+                DBConfig.UserData.BIRTHDAY,
                 DBConfig.UserData.PASSWORD
         };
 
@@ -56,7 +64,7 @@ public class DBHandler {
 
         Cursor cursor;
         try {
-            cursor = database.query(
+            cursor = databaseRead.query(
                     DBConfig.UserData.TABLE_NAME,     // The table to query
                     projection,                               // The columns to return
                     whereClause,                                // The columns for the WHERE clause
@@ -79,10 +87,22 @@ public class DBHandler {
 
         Toast.makeText(context, pwd, Toast.LENGTH_LONG).show();
 
-        return pwd.equals(password);
+        if(pwd.equals(password)){
+            String email = cursor.getString(cursor.getColumnIndexOrThrow(DBConfig.UserData.EMAIL));
+            long birthday = cursor.getLong(cursor.getColumnIndexOrThrow(DBConfig.UserData.BIRTHDAY));
+            Credentials.setPassword(pwd);
+            Credentials.setBirthday(new Date(birthday));
+            Credentials.setUserName(name);
+            Credentials.setEmail(email);
+            return true;
+        }
+        return false;
     }
 
 
-
-
+    @Override
+    public void run() {
+        databaseRead = new DBHelper(context).getReadableDatabase();
+        databaseWrite = new DBHelper(context).getWritableDatabase();
+    }
 }

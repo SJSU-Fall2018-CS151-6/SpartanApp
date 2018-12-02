@@ -1,61 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/listlayoutDivider"></LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="top"
-        android:gravity="center"
-        android:padding="12dp">
-
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:layout_margin="16dp">
 
         <com.github.siyamed.shapeimageview.CircularImageView
             android:id="@+id/lectureImage"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="60dp"
+            android:layout_height="460dp"
             android:src="@drawable/tomcruise"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:scaleType="centerCrop"
+            android:layout_margin="16dp"
+            android:layout_rowSpan="2"
+            />
+
+        <customfonts.MyTextView
+            android:id="@+id/lectureName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="13dp"
+            android:textColor="@color/FormTextColor"
+            android:text="Call with Ryan"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center|left"
+            />
+
+        <customfonts.MyTextView
+            android:id="@+id/lectureTime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="13dp"
+            android:textColor="@color/lightTextColor"
+            android:text="time"
+            android:layout_marginTop="4dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center|left"
             />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="8dp">
 
-            <customfonts.MyTextView
-                android:id="@+id/lectureName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="13dp"
-                android:textColor="@color/FormTextColor"
-                android:text="Call with Ryan"
-                />
+        <customfonts.MyTextView
+            android:id="@+id/lectureTeacher"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="13dp"
+            android:textColor="@color/lightTextColor"
+            android:text="Call with Ryan"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center|left"
+            />
 
-            <customfonts.MyTextView
-                android:id="@+id/lectureTime"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="13dp"
-                android:textColor="@color/lightTextColor"
-                android:text="2 Pm"
-                android:layout_marginTop="4dp"
-                />
+        <customfonts.MyTextView
+            android:id="@+id/lectureRoom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="13dp"
+            android:textColor="@color/lightTextColor"
+            android:text="2 Pm"
+            android:layout_marginTop="4dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center|left"
+            />
 
 
-        </LinearLayout>
-
-    </LinearLayout>
+    </GridLayout>
 
 </LinearLayout>
