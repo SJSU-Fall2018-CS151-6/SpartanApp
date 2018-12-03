@@ -9,13 +9,13 @@ import android.support.annotation.Nullable;
 
 
 public class Course {
-    String name;
-    String time;
-    String room;
-    String teacherName;
-    Drawable image;
+    private String name;
+    private String time;
+    private String room;
+    private String teacherName;
+    private Drawable image;
 
-    public Course(String name, String time, String room, String teacherName, Drawable image) {
+    Course(String name, String time, String room, String teacherName, Drawable image) {
         this.name = name;
         this.time = time;
         this.room = room;
@@ -23,7 +23,7 @@ public class Course {
         this.image = image;
     }
 
-    public Course(Integer i) {
+    Course(Integer i) {
         this.name = "lecture"+Integer.toString(i);
         this.time = "some time";
         this.room = "some room";

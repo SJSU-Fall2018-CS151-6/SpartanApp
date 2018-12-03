@@ -12,6 +12,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     DBHandler dbHandler;
     EditText textViewNewID;
+    EditText textViewNewName;
     EditText textViewNewPWD;
     EditText textViewNewEmail;
     EditText textViewNewBirth;
@@ -23,18 +24,20 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         dbHandler = new DBHandler(this);
         textViewNewID = (EditText) findViewById(R.id.textInputNewID);
+        textViewNewName = (EditText) findViewById(R.id.textInputNewName);
         textViewNewEmail = (EditText) findViewById(R.id.textInputNewEmail);
         textViewNewPWD = (EditText) findViewById(R.id.textInputNewPWD);
         textViewNewBirth = (EditText) findViewById(R.id.textInputNewBirth);
     }
 
     public void signUp(View v){
-        String user = textViewNewID.getText().toString();
+        String id = textViewNewID.getText().toString();
         String email = textViewNewEmail.getText().toString();
         String birth = textViewNewBirth.getText().toString();
         String pwd = textViewNewPWD.getText().toString();
+        String name = textViewNewName.getText().toString();
 
-        dbHandler.newUser(user, email, pwd, birth);
+        dbHandler.newUser(id, name, email, pwd, birth);
 
         onBackPressed();
     }

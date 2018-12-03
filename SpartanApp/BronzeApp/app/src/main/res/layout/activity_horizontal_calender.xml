@@ -31,7 +31,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="320dp"
-        android:src="@drawable/graph_background"
+        android:src="@drawable/login_background"
         android:scaleType="centerCrop"
         />
 
@@ -158,7 +158,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
-                android:textColor="@color/white"
+                android:textColor="@color/blue"
                 android:text="Fall 2018"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -705,7 +705,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="22dp"
-        android:onClick="addNewLecture"
+        android:onClick="addNewCourse"
 
         />
 

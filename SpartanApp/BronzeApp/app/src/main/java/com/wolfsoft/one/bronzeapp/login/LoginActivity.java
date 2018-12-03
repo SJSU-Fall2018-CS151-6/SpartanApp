@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.wolfsoft.one.bronzeapp.home.HomeActivity;
 import com.wolfsoft.one.bronzeapp.R;
-import com.wolfsoft.one.bronzeapp.course.CourseSchedule;
 import com.wolfsoft.one.bronzeapp.database.DBHandler;
 
 public class LoginActivity extends AppCompatActivity {
@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         CharSequence user = inputID.getText();
 
         if(dbHandler.precedeLogin(user.toString(), pwd.toString())){
-            Intent intent = new Intent(getApplicationContext(), CourseSchedule.class);
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
 
             startActivity(intent);
         }else{

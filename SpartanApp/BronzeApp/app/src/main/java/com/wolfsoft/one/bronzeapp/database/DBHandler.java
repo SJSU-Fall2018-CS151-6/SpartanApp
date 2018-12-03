@@ -26,12 +26,14 @@ public class DBHandler implements Runnable, Serializable {
         thread.start();
     }
 
-    public void newUser(String name, String email, String password, String birthday) {
+    public void newUser(String id, String name, String email, String password, String birthday) {
 
         ContentValues values = new ContentValues();
         values.put(DBConfig.UserData.NAME, name);
+        values.put(DBConfig.UserData.STUDENT_ID, id);
         values.put(DBConfig.UserData.EMAIL, email);
         values.put(DBConfig.UserData.PASSWORD, password);
+
 
         try {
             Calendar calendar = Calendar.getInstance();
@@ -47,20 +49,22 @@ public class DBHandler implements Runnable, Serializable {
         long newRowId = databaseWrite.insert(DBConfig.UserData.TABLE_NAME, null, values);
 
         Log.e("NewDBElement", "The new Row Id is " + newRowId);
+        Toast.makeText(context, "You signed up successfully", Toast.LENGTH_SHORT).show();
     }
 
 
-    public Boolean precedeLogin(String name, String password) {
+    public Boolean precedeLogin(String id, String password) {
 
         String[] projection = {
+                DBConfig.UserData.STUDENT_ID,
                 DBConfig.UserData.NAME,
                 DBConfig.UserData.EMAIL,
                 DBConfig.UserData.BIRTHDAY,
                 DBConfig.UserData.PASSWORD
         };
 
-        String whereClause = DBConfig.UserData.NAME+" = ?";
-        String [] whereArgs = {name};
+        String whereClause = DBConfig.UserData.STUDENT_ID+" = ?";
+        String [] whereArgs = {id};
 
         Cursor cursor;
         try {
@@ -85,15 +89,15 @@ public class DBHandler implements Runnable, Serializable {
         cursor.moveToFirst();
         String pwd = cursor.getString(cursor.getColumnIndexOrThrow(DBConfig.UserData.PASSWORD));
 
-        Toast.makeText(context, pwd, Toast.LENGTH_LONG).show();
-
         if(pwd.equals(password)){
             String email = cursor.getString(cursor.getColumnIndexOrThrow(DBConfig.UserData.EMAIL));
             long birthday = cursor.getLong(cursor.getColumnIndexOrThrow(DBConfig.UserData.BIRTHDAY));
+            String name = cursor.getString(cursor.getColumnIndexOrThrow(DBConfig.UserData.NAME));
             Credentials.setPassword(pwd);
             Credentials.setBirthday(new Date(birthday));
             Credentials.setUserName(name);
             Credentials.setEmail(email);
+            Credentials.setUserID(id);
             return true;
         }
         return false;

@@ -66,6 +66,10 @@
         <activity
             android:name=".course.CourseSelector"
             android:label="@string/title_activity_lecture_selector"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".home.HomeActivity"
+            android:label="@string/title_activity_home"
             android:theme="@style/AppTheme"></activity>
     </application>
 

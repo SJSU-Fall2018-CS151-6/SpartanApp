@@ -35,7 +35,7 @@ public class CourseSchedule extends AppCompatActivity implements Serializable {
         textView.setText(Credentials.getUserName());
     }
 
-    public void addNewLecture(View v){
+    public void addNewCourse(View v){
 
         Intent intent = new Intent(getApplicationContext(), CourseSelector.class);
 
@@ -62,7 +62,4 @@ public class CourseSchedule extends AppCompatActivity implements Serializable {
         }
     }
 
-    public void logOut(View v){
-        finish();
-    }
 }

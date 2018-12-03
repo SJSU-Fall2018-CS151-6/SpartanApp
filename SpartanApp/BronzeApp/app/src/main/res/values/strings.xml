@@ -54,5 +54,6 @@
     <string name="chart_label2">Bicycle Commuting</string>
     <string name="chart_label3">00:15:39</string>
     <string name="title_activity_lecture_selector">LectureSelector</string>
+    <string name="title_activity_home">HomeActivity</string>
 
 </resources>

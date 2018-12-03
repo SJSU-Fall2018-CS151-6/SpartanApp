@@ -1,89 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signup_background"
-    >
+    android:background="@drawable/login_background"
+    android:visibility="visible">
 
 
+    <LinearLayout
+        android:layout_width="211dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center">
 
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:src="@drawable/spartanspiritblue" />
+
+
+        <ImageView
+            android:layout_width="134dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="9dp"
+            android:src="@drawable/sjsuwordmark2line" />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-       >
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:padding="12dp"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            android:layout_marginTop="56dp"
-
-
-            />
-
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/textInputNewID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:textColorHint="@color/white"
             android:background="@color/fullTransparent"
-            android:padding="12dp"
-            android:textSize="@dimen/textSize"
-            android:drawableLeft="@drawable/icon_username"
-            android:drawablePadding="12dp"
-            android:layout_marginTop="22dp"
-            />
+            android:drawableLeft="@drawable/ic_avatar"
+            android:drawablePadding="20dp"
+            android:hint="Student ID"
+            android:padding="15dp"
+            android:textColorHint="@color/spartanBlue"
+            android:textSize="@dimen/textSize" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/divider"></LinearLayout>
+        <EditText
+            android:id="@+id/textInputNewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fullTransparent"
+            android:drawableLeft="@drawable/ic_avatar"
+            android:drawablePadding="20dp"
+            android:hint="Name"
+            android:padding="15dp"
+            android:textColorHint="@color/spartanBlue"
+            android:textSize="@dimen/textSize" />
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider"></LinearLayout>
         <EditText
             android:id="@+id/textInputNewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textColorHint="@color/white"
             android:background="@color/fullTransparent"
-            android:padding="12dp"
-            android:textSize="@dimen/textSize"
-            android:drawableLeft="@drawable/icon_username"
-            android:drawablePadding="12dp"
-            android:layout_marginTop="12dp"
-            />
+            android:drawableLeft="@drawable/ic_avatar"
+            android:drawablePadding="20dp"
+            android:hint="Email"
+            android:padding="15dp"
+            android:textColorHint="@color/spartanBlue"
+            android:textSize="@dimen/textSize" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/divider"></LinearLayout>
+        <EditText
+            android:id="@+id/textInputNewBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fullTransparent"
+            android:drawableLeft="@drawable/ic_avatar"
+            android:drawablePadding="20dp"
+            android:hint="Birthday"
+            android:padding="15dp"
+            android:textColorHint="@color/spartanBlue"
+            android:textSize="@dimen/textSize" />
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider"></LinearLayout>
 
 
         <EditText
             android:id="@+id/textInputNewPWD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/fullTransparent"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="20dp"
             android:hint="Password"
-            android:textColorHint="@color/white"
-            android:background="@color/fullTransparent"
-            android:padding="12dp"
-            android:textSize="@dimen/textSize"
-            android:drawableLeft="@drawable/icon_username"
-            android:layout_marginTop="12dp"
-            android:drawablePadding="12dp"
-            />
+            android:padding="15dp"
+            android:textColorHint="@color/spartanBlue"
+            android:textSize="@dimen/textSize" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,54 +134,28 @@
             android:background="@color/divider"></LinearLayout>
 
 
-        <EditText
-            android:id="@+id/textInputNewBirth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Birthday"
-            android:textColorHint="@color/white"
-            android:background="@color/fullTransparent"
-            android:padding="12dp"
-            android:textSize="@dimen/textSize"
-            android:drawableLeft="@drawable/icon_username"
-            android:drawablePadding="12dp"
-            android:layout_marginTop="12dp"
-            />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/divider"></LinearLayout>
-
-    </LinearLayout>
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
-
-
-
-        <TextView
-            android:onClick="signUp"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:orientation="horizontal">
 
-            android:background="@color/blue"
-            android:padding="20dp"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
-            android:gravity="center"
-            />
+
+            <Button
+                android:onClick="signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+
+                android:background="@color/spartanBlue"
+                android:padding="20dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
 
     </LinearLayout>
-
-
-
 
 </RelativeLayout>
