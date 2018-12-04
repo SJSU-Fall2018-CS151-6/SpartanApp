@@ -20,6 +20,10 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
+            android:name=".todo.ToDoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
             android:name=".PieGraphActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />

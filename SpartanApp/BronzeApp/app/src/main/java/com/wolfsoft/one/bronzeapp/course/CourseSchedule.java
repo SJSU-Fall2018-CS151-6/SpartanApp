@@ -8,12 +8,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.wolfsoft.one.bronzeapp.R;
+import com.wolfsoft.one.bronzeapp.general.Behavior;
+import com.wolfsoft.one.bronzeapp.home.HomeActivity;
 import com.wolfsoft.one.bronzeapp.login.Credentials;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class CourseSchedule extends AppCompatActivity implements Serializable {
+public class CourseSchedule extends AppCompatActivity implements Behavior {
 
     ArrayList<Course> list = new ArrayList<>();
     ListView listView;
@@ -29,10 +30,6 @@ public class CourseSchedule extends AppCompatActivity implements Serializable {
         listView = (ListView) findViewById(R.id.scheduleListView);
 
         listView.setAdapter(adapter);
-
-        TextView textView = (TextView) findViewById(R.id.userName);
-
-        textView.setText(Credentials.getUserName());
     }
 
     public void addNewCourse(View v){
@@ -62,4 +59,10 @@ public class CourseSchedule extends AppCompatActivity implements Serializable {
         }
     }
 
+    @Override
+    public void goHome(View v) {
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+
+        startActivity(intent);
+    }
 }

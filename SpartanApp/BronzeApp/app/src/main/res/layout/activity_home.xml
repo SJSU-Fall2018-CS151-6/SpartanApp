@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/spartanGold"
+    android:background="@drawable/login_background"
     android:visibility="visible">
 
 
@@ -32,6 +32,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:scaleType="centerCrop"
             android:layout_margin="16dp"
             android:src="@drawable/btn_home"
             android:onClick="gotToList"/>
@@ -68,6 +69,7 @@
         <com.github.siyamed.shapeimageview.CircularImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:onClick="goToToDo"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="16dp"

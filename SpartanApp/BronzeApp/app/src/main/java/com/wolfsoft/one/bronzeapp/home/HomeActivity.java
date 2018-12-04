@@ -18,6 +18,7 @@ import com.wolfsoft.one.bronzeapp.R;
 import com.wolfsoft.one.bronzeapp.SettingsActivity;
 import com.wolfsoft.one.bronzeapp.course.CourseSchedule;
 import com.wolfsoft.one.bronzeapp.login.SignUpActivity;
+import com.wolfsoft.one.bronzeapp.todo.ToDoActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -73,5 +74,11 @@ public class HomeActivity extends AppCompatActivity {
 
     public void logOut(View v){
         finish();
+    }
+
+    public void goToToDo(View v){
+        Intent intent = new Intent(getApplicationContext(), ToDoActivity.class);
+
+        startActivity(intent);
     }
 }

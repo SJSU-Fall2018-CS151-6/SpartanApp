@@ -5,6 +5,20 @@
     android:background="@drawable/login_background"
     android:visibility="visible">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/sjsu_logo"
+            android:onClick="goToSignIn"
+            android:gravity="left"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="211dp"

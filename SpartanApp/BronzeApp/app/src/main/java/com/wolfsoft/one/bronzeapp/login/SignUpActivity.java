@@ -1,5 +1,6 @@
 package com.wolfsoft.one.bronzeapp.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.EditText;
 
 import com.wolfsoft.one.bronzeapp.R;
 import com.wolfsoft.one.bronzeapp.database.DBHandler;
+import com.wolfsoft.one.bronzeapp.home.HomeActivity;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -40,5 +42,9 @@ public class SignUpActivity extends AppCompatActivity {
         dbHandler.newUser(id, name, email, pwd, birth);
 
         onBackPressed();
+    }
+
+    public void goToSignIn(View v){
+        finish();
     }
 }
