@@ -64,6 +64,10 @@ public class ToDoActivity extends AppCompatActivity implements Behavior {
     }
     @Override
     public void goHome(View v) {
+        timer.cancel();
+        timer.purge();
+        timer2.cancel();
+        timer2.purge();
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
 
         startActivity(intent);
@@ -77,7 +81,7 @@ public class ToDoActivity extends AppCompatActivity implements Behavior {
             public void onClick(DialogInterface dialog, int which) {
                 timer.schedule(new CourseNotificationCreator(),1000,1000);
 
-                timer.schedule(consumerThread,0,1000);
+                timer2.schedule(consumerThread,0,1000);
             }
         });
         dlgAlert.setCancelable(true);
@@ -89,5 +93,8 @@ public class ToDoActivity extends AppCompatActivity implements Behavior {
         super.onDestroy();
         timer.cancel();
         timer.purge();
+        timer2.cancel();
+        timer2.purge();
     }
+
 }
