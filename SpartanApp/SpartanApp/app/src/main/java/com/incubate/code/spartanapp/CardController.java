@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Diogo Bernardino
+ *
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,10 +23,6 @@ import android.widget.RelativeLayout;
 
 
 public class CardController {
-
-
-//	private final ImageButton mPlayBtn;
-//	private final ImageButton mUpdateBtn;
 
 
 	private final Runnable showAction = new Runnable() {

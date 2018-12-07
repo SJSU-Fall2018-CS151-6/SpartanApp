@@ -1,4 +1,3 @@
-//package com.wolfsoft.one.bronzeapp.course;
 package com.incubate.code.spartanapp.course;
 
 import android.graphics.Canvas;
@@ -8,6 +7,11 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+/**
+ *
+ *
+ *
+ */
 
 public class Course {
     private String name;
@@ -16,6 +20,14 @@ public class Course {
     private String teacherName;
     private Drawable image;
 
+    /**
+     *
+     * @param name
+     * @param time
+     * @param room
+     * @param teacherName
+     * @param image
+     */
     Course(String name, String time, String room, String teacherName, Drawable image) {
         this.name = name;
         this.time = time;
@@ -24,6 +36,10 @@ public class Course {
         this.image = image;
     }
 
+    /**
+     *
+     * @param i
+     */
     Course(Integer i) {
         this.name = "lecture"+Integer.toString(i);
         this.time = "some time";
@@ -46,22 +62,42 @@ public class Course {
         };
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getTime() {
         return time;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getRoom() {
         return room;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getTeacherName() {
         return teacherName;
     }
 
+    /**
+     *
+     * @return
+     */
     public Drawable getImage() {
         return image;
     }

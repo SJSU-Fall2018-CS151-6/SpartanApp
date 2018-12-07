@@ -1,4 +1,3 @@
-//package com.wolfsoft.one.bronzeapp.course;
 package com.incubate.code.spartanapp.course;
 
 import android.content.Intent;
@@ -7,15 +6,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.incubate.code.spartanapp.R;
-
 import java.util.ArrayList;
 
-//import com.wolfsoft.one.spartanapp.R;
+
+/**
+ *
+ *
+ */
 
 public class CourseSelector extends AppCompatActivity {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +50,10 @@ public class CourseSelector extends AppCompatActivity {
 
     }
 
+    /**
+     *
+     * @param v
+     */
     public void goBack(View v){
         finish();
     }

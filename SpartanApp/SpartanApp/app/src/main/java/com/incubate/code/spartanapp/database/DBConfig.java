@@ -1,7 +1,11 @@
-//package com.wolfsoft.one.bronzeapp.database;
 package com.incubate.code.spartanapp.database;
 
 import android.provider.BaseColumns;
+
+/**
+ *
+ *
+ */
 
 class DBConfig {
 

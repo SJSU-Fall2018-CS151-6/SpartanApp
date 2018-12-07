@@ -6,7 +6,8 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * Created by one on 3/12/15.
+ *
+ *
  */
 public class MySplashTextView extends TextView {
 

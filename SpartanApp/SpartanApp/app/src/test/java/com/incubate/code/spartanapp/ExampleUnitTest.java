@@ -1,5 +1,5 @@
-package com.wolfsoft.one.spartanapp;
-
+//package com.wolfsoft.one.spartanapp;
+package com.incubate.code.spartanapp;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

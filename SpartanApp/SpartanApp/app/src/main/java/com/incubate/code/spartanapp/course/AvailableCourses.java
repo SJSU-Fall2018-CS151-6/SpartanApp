@@ -1,18 +1,14 @@
-//package com.wolfsoft.one.bronzeapp.course;
 package com.incubate.code.spartanapp.course;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-
 import com.incubate.code.spartanapp.R;
-
 import java.util.ArrayList;
 
-//import com.wolfsoft.one.bronzeapp.course.Course;
 
-//import com.wolfsoft.one.bronzeapp.course.Course;
 
 /**
+ *
  *
  */
 

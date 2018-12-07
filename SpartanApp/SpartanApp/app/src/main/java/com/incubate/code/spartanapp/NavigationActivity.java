@@ -1,4 +1,3 @@
-//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.content.res.Configuration;
