@@ -3,9 +3,11 @@ package com.incubate.code.spartanapp.database;
 
 import android.provider.BaseColumns;
 
-class DBConfig {
+import java.io.Serializable;
 
-    static class UserData implements BaseColumns {
+class DBConfig implements Serializable  {
+
+    static class UserData implements BaseColumns{
         static final String TABLE_NAME = "userData";
         static final String STUDENT_ID = "student_id";
         static final String NAME = "name";
