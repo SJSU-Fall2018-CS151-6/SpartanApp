@@ -3,7 +3,14 @@ package com.incubate.code.spartanapp.login;
 import java.util.Date;
 
 /**
+ * Credentials Model Object.
+ * Various attributes of Credentials and related behavior.
+ * Credentials class implement all the attribute needed for a student.
+ * These include userID, userName,email,password,birthday.
  *
+ * @author Philp H
+ * @author Abraham T
+ * @version 1.0
  *
  */
 public class Credentials {
@@ -14,7 +21,7 @@ public class Credentials {
     private static Date birthday;
 
     /**
-     *
+     * Get user name.
      * @return
      */
     public static String getUserName() {
@@ -22,7 +29,7 @@ public class Credentials {
     }
 
     /**
-     *
+     *Set User Name
      * @param userName
      */
     public static void setUserName(String userName) {

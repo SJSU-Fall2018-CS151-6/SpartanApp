@@ -1,4 +1,3 @@
-//package com.wolfsoft.one.bronzeapp.todo;
 package com.incubate.code.spartanapp.todo;
 
 import android.content.DialogInterface;
@@ -19,8 +18,6 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-//import com.wolfsoft.one.bronzeapp.general.Behavior;
-//import com.wolfsoft.one.bronzeapp.home.HomeActivity;
 
 public class ToDoActivity extends AppCompatActivity implements Behavior {
 

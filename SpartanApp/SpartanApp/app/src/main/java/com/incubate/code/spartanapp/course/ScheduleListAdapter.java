@@ -12,7 +12,8 @@ import com.incubate.code.spartanapp.R;
 import java.util.ArrayList;
 
 /**
- *
+ * This method will handel all the necessary activities for listing
+ * course schedule also extends ArrayAdapter<Course>
  *
  */
 
@@ -84,12 +85,12 @@ public class ScheduleListAdapter extends ArrayAdapter<Course> implements View.On
 
         convertView.setTag(viewHolder);
 
-        Log.e("adapter", course.getName());
-        viewHolder.textViewName.setText(course.getName());
-        viewHolder.textViewTime.setText(course.getTime());
-        viewHolder.textViewRoom.setText(course.getRoom());
+        Log.e("adapter", course.getCourseName());
+        viewHolder.textViewName.setText(course.getCourseName());
+        viewHolder.textViewTime.setText(course.getCourseTime());
+        viewHolder.textViewRoom.setText(course.getClassRoom());
         viewHolder.textViewTeacher.setText(course.getTeacherName());
-        viewHolder.imageView.setImageDrawable(course.getImage());
+        viewHolder.imageView.setImageDrawable(course.getCourseImage());
 
         return convertView;
     }

@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3281da</color>
-    <color name="colorPrimaryDark">#3281da</color>
-    <color name="colorAccent">#3281da</color>
+    <color courseName="colorPrimary">#3281da</color>
+    <color courseName="colorPrimaryDark">#3281da</color>
+    <color courseName="colorAccent">#3281da</color>
 
 
-    <color name="blue">#3281da</color>
-    <color name="spartanBlue">#2979FF</color>
-    <color name="spartanGold">#FFDE03</color>
+    <color courseName="blue">#3281da</color>
+    <color courseName="spartanBlue">#2979FF</color>
+    <color courseName="spartanGold">#FFDE03</color>
 
-    <color name="white">#ffffff</color>
-    <color name="fullTransparent">#00000000</color>
-    <color name="divider">#8c9e9e9e</color>
-    <color name="dullWhite">#9e9e9e</color>
+    <color courseName="white">#ffffff</color>
+    <color courseName="fullTransparent">#00000000</color>
+    <color courseName="divider">#8c9e9e9e</color>
+    <color courseName="dullWhite">#9e9e9e</color>
 
 
     <!-- Grid layout -->
 
-      <color name="darkTextColor">#1d1d26</color>
-        <color name="lightTextColor">#a8a8aa</color>
-    <color name="gridlayoutDivider">#e4e5ea</color>
+      <color courseName="darkTextColor">#1d1d26</color>
+        <color courseName="lightTextColor">#a8a8aa</color>
+    <color courseName="gridlayoutDivider">#e4e5ea</color>
 
     <!-- list layout -->
 
-    <color name="listlayoutDivider">#f8f8f9</color>
-    <color name="listviewTextColor">#111111</color>
-    <color name="listviewSelectedTextColor">#cfcfd1</color>
+    <color courseName="listlayoutDivider">#f8f8f9</color>
+    <color courseName="listviewTextColor">#111111</color>
+    <color courseName="listviewSelectedTextColor">#cfcfd1</color>
 
     <!-- Form layout -->
 
-    <color name="formDivider">#dee0e2</color>
-    <color name="FormTextColor">#1d1d26</color>
+    <color courseName="formDivider">#dee0e2</color>
+    <color courseName="FormTextColor">#1d1d26</color>
 
 
     <!-- Navigation layout -->
 
-    <color name="navigationDivider">#dee0e2</color>
-    <color name="navigationTextColor">#1d1d26</color>
+    <color courseName="navigationDivider">#dee0e2</color>
+    <color courseName="navigationTextColor">#1d1d26</color>
 
 
     <!-- Viewpager layout -->
 
-    <color name="viewPagerTextColor">#1d1d26</color>
-    <color name="viewPagerSelectedBotton">#3281da</color>
-    <color name="viewPagerUnSelectBotton">#ceced0</color>
+    <color courseName="viewPagerTextColor">#1d1d26</color>
+    <color courseName="viewPagerSelectedBotton">#3281da</color>
+    <color courseName="viewPagerUnSelectBotton">#ceced0</color>
 
-    <color name="calanderBg">#eeeeee</color>
+    <color courseName="calanderBg">#eeeeee</color>
 
 
 </resources>

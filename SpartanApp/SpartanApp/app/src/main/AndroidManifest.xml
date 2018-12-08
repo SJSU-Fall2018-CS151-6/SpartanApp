@@ -8,71 +8,71 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListOfAllAppActivity">
+        <activity android:courseName=".ListOfAllAppActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:courseName="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:courseName="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".GraphActivity"
+            android:courseName=".GraphActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".todo.ToDoActivity"
+            android:courseName=".todo.ToDoActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".PieGraphActivity"
+            android:courseName=".PieGraphActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ListActivity"
+            android:courseName=".ListActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".GridLayoutActivity"
+            android:courseName=".GridLayoutActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".course.CourseSchedule"
+            android:courseName=".course.CourseSchedule"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".BigCalendarActivity"
+            android:courseName=".BigCalendarActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".login.LoginActivity"
+            android:courseName=".login.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".login.SignUpActivity"
+            android:courseName=".login.SignUpActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".SettingsActivity"
+            android:courseName=".SettingsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ViewPagerActivity"
+            android:courseName=".ViewPagerActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".NavigationActivity"
+            android:courseName=".NavigationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".StikListviewActtitvity"
+            android:courseName=".StikListviewActtitvity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".course.CourseSelector"
+            android:courseName=".course.CourseSelector"
             android:label="@string/title_activity_lecture_selector"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".home.HomeActivity"
+            android:courseName=".home.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme"></activity>
     </application>

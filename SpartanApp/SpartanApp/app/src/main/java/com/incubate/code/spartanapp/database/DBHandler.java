@@ -16,7 +16,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- *
+ * This class implement the database handler class
  *
  */
 
@@ -27,7 +27,7 @@ public class DBHandler implements Runnable, Serializable {
     private SQLiteDatabase databaseRead;
 
     /**
-     *
+     * Constructor class for DBHandler
      * @param context
      */
     public DBHandler(Context context){
@@ -37,7 +37,7 @@ public class DBHandler implements Runnable, Serializable {
     }
 
     /**
-     *
+     * Create New user
      * @param id
      * @param name
      * @param email
@@ -71,7 +71,7 @@ public class DBHandler implements Runnable, Serializable {
     }
 
     /**
-     *
+     * Handel the Login process
      * @param id
      * @param password
      * @return

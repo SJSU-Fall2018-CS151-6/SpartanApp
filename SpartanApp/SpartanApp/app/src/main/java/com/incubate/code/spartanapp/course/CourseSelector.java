@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 
 /**
- *
+ * This class will handel all the course selector activities
  *
  */
 

@@ -8,8 +8,9 @@ import java.util.ArrayList;
 
 
 /**
- *
- *
+ *This Class will list all the available course to be added
+ *It Uses the course class to create list of available courses
+ * to the student.
  */
 
 public class AvailableCourses {
@@ -47,10 +48,11 @@ public class AvailableCourses {
     }
 
     /**
-     *
+     * This method will get the index of the course from the ArrayList
+     * of courses.
      *
      * @param
-     * @return
+     * @return index
      */
 
     public Course getIndexOf(Integer index){
@@ -61,8 +63,8 @@ public class AvailableCourses {
     }
 
     /**
-     *
-     * @return
+     * Will get the Array List of Courses
+     * @return courses
      */
 
     public ArrayList<Course> getCourses(){

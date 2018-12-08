@@ -8,44 +8,51 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
+ * Course Model Object.
+ * Various attributes of course, and related behavior.
+ * Course class implement all the attribute needed for a course.
+ * These include course courseName, courseTime, class classRoom,
+ * the instructor courseName and courseImage for the course.
  *
- *
+ * @author Philp H
+ * @author Abraham T
+ * @version 1.0
  *
  */
 
 public class Course {
-    private String name;
-    private String time;
-    private String room;
+    private String courseName;
+    private String courseTime;
+    private String classRoom;
     private String teacherName;
-    private Drawable image;
+    private Drawable courseImage;
 
     /**
-     *
-     * @param name
-     * @param time
-     * @param room
-     * @param teacherName
-     * @param image
+     *  Course Constructor.
+     * @param courseName (required) course courseName
+     * @param courseTime courseTime of the course given
+     * @param classRoom the class classRoom courseName
+     * @param teacherName courseName of the instructor
+     * @param courseImage the course courseImage holder
      */
-    Course(String name, String time, String room, String teacherName, Drawable image) {
-        this.name = name;
-        this.time = time;
-        this.room = room;
+    Course(String courseName, String courseTime, String classRoom, String teacherName, Drawable courseImage) {
+        this.courseName = courseName;
+        this.courseTime = courseTime;
+        this.classRoom = classRoom;
         this.teacherName = teacherName;
-        this.image = image;
+        this.courseImage = courseImage;
     }
 
     /**
-     *
+     * Course Constructor that instantiate the objects
      * @param i
      */
     Course(Integer i) {
-        this.name = "lecture"+Integer.toString(i);
-        this.time = "some time";
-        this.room = "some room";
+        this.courseName = "lecture"+Integer.toString(i);
+        this.courseTime = "some courseTime";
+        this.classRoom = "some classRoom";
         this.teacherName = "some teacher";
-        this.image = new Drawable() {
+        this.courseImage = new Drawable() {
             @Override
             public void draw(@NonNull Canvas canvas) { }
 
@@ -63,31 +70,31 @@ public class Course {
     }
 
     /**
-     *
+     * The method will get the student courseName
      * @return
      */
-    public String getName() {
-        return name;
+    public String getCourseName() {
+        return courseName;
     }
 
     /**
-     *
+     * The method will get the the courseTime for the course
      * @return
      */
-    public String getTime() {
-        return time;
+    public String getCourseTime() {
+        return courseTime;
     }
 
     /**
-     *
+     * The method will get the classRoom for
      * @return
      */
-    public String getRoom() {
-        return room;
+    public String getClassRoom() {
+        return classRoom;
     }
 
     /**
-     *
+     * This method will get the Teacher name for the course
      * @return
      */
     public String getTeacherName() {
@@ -95,10 +102,10 @@ public class Course {
     }
 
     /**
-     *
+     * This method will get image for the course
      * @return
      */
-    public Drawable getImage() {
-        return image;
+    public Drawable getCourseImage() {
+        return courseImage;
     }
 }

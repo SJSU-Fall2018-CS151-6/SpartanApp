@@ -12,7 +12,9 @@ import java.util.ArrayList;
 
 
 /**
- *
+ * CourseSchedule class extends the AppCompatActivity which
+ * implements Behavior. These class will handel creating the course
+ * list schedule.
  *
  */
 public class CourseSchedule extends AppCompatActivity implements Behavior {
@@ -22,7 +24,7 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
     ScheduleListAdapter adapter;
 
     /**
-     *
+     * Will create instance of listView
      * @param savedInstanceState
      */
     @Override
@@ -38,7 +40,7 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
     }
 
     /**
-     *
+     * This method will add new course to the lit view
      * @param v
      */
     public void addNewCourse(View v){
@@ -75,7 +77,8 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
     }
 
     /**
-     *
+     * This Method will call goHome Class that implement the loose coupling
+     * requirement of the project
      * @param v
      */
     @Override
