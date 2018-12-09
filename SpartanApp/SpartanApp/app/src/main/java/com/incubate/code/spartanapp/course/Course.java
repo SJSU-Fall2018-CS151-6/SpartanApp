@@ -65,4 +65,18 @@ public class Course {
     public Drawable getImage() {
         return image;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o.getClass() != this.getClass()){
+            return false;
+        }
+        Course course = (Course)o;
+        if (!name.equals(course.getName())) return false;
+        if (!time.equals(course.getTime())) return false;
+        if (!room.equals(course.getRoom())) return false;
+        if (!teacherName.equals(course.getTeacherName())) return false;
+
+        return image.equals(course.getImage());
+    }
 }
