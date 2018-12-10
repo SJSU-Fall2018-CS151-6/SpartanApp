@@ -52,13 +52,14 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
                 if(data != null ){
                     String returnValue = data.getStringExtra("lectureIndex");
 
-                    AvailableCourses courses = null;
+                    AvailableCourses courses = new AvailableCourses(this);
 
-                    try {
+                    /*try {
                         Class<?> c = Class.forName("com.incubate.code.spartanapp.course.AvailableCourses");
 
-                        Constructor constructor = c.getConstructor(CourseSchedule.class);
-                        courses = (AvailableCourses) constructor.newInstance("AvailableCourses");
+                        Class[] type = { CourseSchedule.class };
+                        Constructor constructor = c.getConstructor(type);
+                        courses = (AvailableCourses) constructor.newInstance(this);
 
                         // production code should handle these exceptions more gracefully
                     } catch (InstantiationException ie){
@@ -71,7 +72,7 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
                         iae.printStackTrace();
                     }catch (InvocationTargetException ite){
                         ite.printStackTrace();
-                    }
+                    }*/
 
                     Course course = courses.getIndexOf(Integer.parseInt(returnValue));
                     adapter.add(course);

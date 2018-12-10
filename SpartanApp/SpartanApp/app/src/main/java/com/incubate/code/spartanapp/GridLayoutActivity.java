@@ -13,7 +13,7 @@ public class GridLayoutActivity extends AppCompatActivity {
     private GridLayoutAdapter gridLayoutAdapter;
     private ArrayList<BeanClassGrid> beanClassGridArrayList;
 
-    private String[] TITLE = {"Shop","Work","Health","Travel","Bills","Auto"};
+    private String[] TITLE = {"Homework","Lab","Quizzes","Midterms","Projects","Finals"};
     private String[] SUB_TITLE = {"25 ITEMS","12 ITEMS","8 ITEMS","56 ITEMS","6 ITEMS","33 ITEMS"};
     private String[] COLORS = {"#FF4081","#4cd2c7","#8284ab","#d7dafd","#faa75b","#f2c2ec","#ff527d"};
 

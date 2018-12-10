@@ -26,9 +26,9 @@ public class PieGraphActivity extends AppCompatActivity {
 
     int value1, value2,value3;
 
-    private String[] TITLE = {"Shop","Work","Health","Travel","Bills","Auto","Shop","Work"};
-    private String[] SUB_TITLE = {"25","12","8","56","6","33","11","6"};
-    private String[] COLORS = {"#FF4081","#4cd2c7","#8284ab","#d7dafd","#faa75b","#f2c2ec","#ff527d","#4cd2c7","#8284ab"};
+    private String[] TITLE = {"Homework","Lab","Quizzes","Midterms","Projects","Assays","Finals"};
+    private String[] SUB_TITLE = {"25","12","8","56","6","33","11"};
+    private String[] COLORS = {"#FF4081","#4cd2c7","#8284ab","#d7dafd","#faa75b","#f2c2ec","#ff527d","#4cd2c7"};
 
     private ArrayList<GraphList> graphListArrayList;
 
@@ -74,13 +74,13 @@ public class PieGraphActivity extends AppCompatActivity {
 
 
         Collection<FitChartValue> valuesBig = new ArrayList<>();
-        valuesBig.add(new FitChartValue(value1, Color.parseColor("#f6b45e")));
+        valuesBig.add(new FitChartValue(value1, Color.parseColor("#2979FF")));
 
         Collection<FitChartValue> valuesSmall1 = new ArrayList<>();
-        valuesSmall1.add(new FitChartValue(value2, Color.parseColor("#4edcc6")));
+        valuesSmall1.add(new FitChartValue(value2, Color.parseColor("#2979FF")));
 
         Collection<FitChartValue> valuesSmall2 = new ArrayList<>();
-        valuesSmall2.add(new FitChartValue(value3, Color.parseColor("#a176c8")));
+        valuesSmall2.add(new FitChartValue(value3, Color.parseColor("#2979FF")));
 
         big.setValues(valuesBig);
         small1.setValues(valuesSmall1);
