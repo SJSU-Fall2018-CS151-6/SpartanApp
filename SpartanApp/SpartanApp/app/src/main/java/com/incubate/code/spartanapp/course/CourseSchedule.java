@@ -11,6 +11,7 @@ import com.incubate.code.spartanapp.R;
 import com.incubate.code.spartanapp.general.Behavior;
 import com.incubate.code.spartanapp.home.HomeActivity;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -51,28 +52,27 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
                 if(data != null ){
                     String returnValue = data.getStringExtra("lectureIndex");
 
-                    /*
+                    AvailableCourses courses = null;
+
                     try {
-                        Class c = new AvailableCourses(this);
-                        Class argType = new Class { this.class};
-                        c.con
-                        Method getIndexOf = c.getDeclaredMethod("getIndexOf", argType);
-                        System.out.format("invoking %s.getIndexOf()%n", c.getName());
-                        getIndexOf.invoke(null, (Object)this);
+                        Class<?> c = Class.forName("com.incubate.code.spartanapp.course.AvailableCourses");
+
+                        Constructor constructor = c.getConstructor(CourseSchedule.class);
+                        courses = (AvailableCourses) constructor.newInstance("AvailableCourses");
 
                         // production code should handle these exceptions more gracefully
-                    } catch (ClassNotFoundException x) {
-                        x.printStackTrace();
-                    } catch (NoSuchMethodException x) {
-                        x.printStackTrace();
-                    } catch (IllegalAccessException x) {
-                        x.printStackTrace();
-                    } catch (InvocationTargetException x) {
-                        x.printStackTrace();
+                    } catch (InstantiationException ie){
+                        ie.printStackTrace();
+                    } catch (ClassNotFoundException cnfe){
+                        cnfe.printStackTrace();
+                    }catch (NoSuchMethodException nsme){
+                        nsme.printStackTrace();
+                    }catch (IllegalAccessException iae){
+                        iae.printStackTrace();
+                    }catch (InvocationTargetException ite){
+                        ite.printStackTrace();
                     }
-                       */
 
-                    AvailableCourses courses = new AvailableCourses(this);
                     Course course = courses.getIndexOf(Integer.parseInt(returnValue));
                     adapter.add(course);
                     adapter.notifyDataSetChanged();
