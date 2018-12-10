@@ -11,7 +11,10 @@ import com.incubate.code.spartanapp.R;
 import com.incubate.code.spartanapp.general.Behavior;
 import com.incubate.code.spartanapp.home.HomeActivity;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CourseSchedule extends AppCompatActivity implements Behavior {
 
@@ -27,6 +30,7 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
         adapter = new ScheduleListAdapter(list, this);
 
         listView = (ListView) findViewById(R.id.scheduleListView);
+
 
         listView.setAdapter(adapter);
     }
@@ -46,6 +50,27 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
             case (11) : {
                 if(data != null ){
                     String returnValue = data.getStringExtra("lectureIndex");
+
+                    /*
+                    try {
+                        Class c = new AvailableCourses(this);
+                        Class argType = new Class { this.class};
+                        c.con
+                        Method getIndexOf = c.getDeclaredMethod("getIndexOf", argType);
+                        System.out.format("invoking %s.getIndexOf()%n", c.getName());
+                        getIndexOf.invoke(null, (Object)this);
+
+                        // production code should handle these exceptions more gracefully
+                    } catch (ClassNotFoundException x) {
+                        x.printStackTrace();
+                    } catch (NoSuchMethodException x) {
+                        x.printStackTrace();
+                    } catch (IllegalAccessException x) {
+                        x.printStackTrace();
+                    } catch (InvocationTargetException x) {
+                        x.printStackTrace();
+                    }
+                       */
 
                     AvailableCourses courses = new AvailableCourses(this);
                     Course course = courses.getIndexOf(Integer.parseInt(returnValue));

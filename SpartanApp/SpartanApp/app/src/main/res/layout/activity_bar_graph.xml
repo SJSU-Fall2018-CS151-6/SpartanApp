@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:textSize="32dp"
             android:textColor="@color/white"
+            android:id="@+id/barUserNameLable"
             android:text="Nicole James"
             android:paddingLeft="16dp"
             android:layout_gravity="bottom"
@@ -95,7 +96,7 @@
         android:layout_height="wrap_content"
         android:textSize="14dp"
         android:textColor="@color/FormTextColor"
-        android:text="FEBRUARY"
+        android:text="DECEMBER"
         android:paddingLeft="16dp"
 
         />
@@ -105,7 +106,7 @@
             android:layout_height="wrap_content"
             android:textSize="14dp"
             android:textColor="@color/lightTextColor"
-            android:text="2015"
+            android:text="2018"
             android:paddingLeft="16dp"
 
 
