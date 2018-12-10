@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.support.v4.app.Fragment;
@@ -5,9 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
- *
- *
- *
+ * Created by wolfsoft on 10/11/2015.
  */
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 

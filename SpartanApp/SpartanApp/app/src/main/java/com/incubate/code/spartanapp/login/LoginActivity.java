@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp.login;
 package com.incubate.code.spartanapp.login;
 
 import android.content.Intent;
@@ -11,11 +12,8 @@ import com.incubate.code.spartanapp.R;
 import com.incubate.code.spartanapp.database.DBHandler;
 import com.incubate.code.spartanapp.home.HomeActivity;
 
-/**
- *
- *
- *
- */
+//import com.wolfsoft.one.bronzeapp.home.HomeActivity;
+//import com.wolfsoft.one.bronzeapp.database.DBHandler;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -23,10 +21,6 @@ public class LoginActivity extends AppCompatActivity {
     TextView inputPWD;
     DBHandler dbHandler;
 
-    /**
-     *
-     * @param savedInstanceState
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,20 +30,12 @@ public class LoginActivity extends AppCompatActivity {
         inputPWD = (TextView) findViewById(R.id.textInputPWD);
     }
 
-    /**
-     *
-     * @param v
-     */
     public void gotToSignUp(View v){
         Intent intent = new Intent(getApplicationContext(), com.incubate.code.spartanapp.login.SignUpActivity.class);
 
         startActivity(intent);
     }
 
-    /**
-     *
-     * @param v
-     */
     public void signIn(View v){
         CharSequence pwd = inputPWD.getText();
         CharSequence user = inputID.getText();

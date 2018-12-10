@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.graphics.Color;
@@ -11,7 +12,7 @@ import com.txusballesteros.widgets.FitChartValue;
 import java.util.ArrayList;
 import java.util.Collection;
 
-
+//import com.wolfsoft.one.spartanapp.R;
 
 public class PieGraphActivity extends AppCompatActivity {
 

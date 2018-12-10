@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.os.Bundle;
@@ -5,22 +6,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.incubate.code.spartanapp.login.Credentials;
 import com.incubate.code.spartanapp.stackedchart.StackedCardOne;
+import com.rey.material.widget.TextView;
+
 import java.util.ArrayList;
 
+import customfonts.MyTextView;
 
+//import com.wolfsoft.one.spartanapp.R;
+
+//import com.wolfsoft.one.bronzeapp.stackedchart.StackedCardOne;
 
 public class GraphActivity extends AppCompatActivity {
 
     private BarChart chart;
 
-
+   // private android.support.v4.app.Fragment mCurrFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_graph);
 
+        MyTextView textView = (MyTextView) findViewById(R.id.barUserNameLable);
+
+        textView.setText(Credentials.getUserName());
 
         (new StackedCardOne((CardView) findViewById(R.id.card5))).init();
 

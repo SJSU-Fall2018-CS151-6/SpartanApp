@@ -41,7 +41,7 @@
             android:layout_height="0dp"
             android:textSize="13dp"
             android:textColor="@color/lightTextColor"
-            android:text="courseTime"
+            android:text="time"
             android:layout_marginTop="4dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"

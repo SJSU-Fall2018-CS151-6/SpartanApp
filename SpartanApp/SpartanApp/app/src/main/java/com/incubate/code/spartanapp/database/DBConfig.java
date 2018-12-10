@@ -1,15 +1,13 @@
+//package com.wolfsoft.one.bronzeapp.database;
 package com.incubate.code.spartanapp.database;
 
 import android.provider.BaseColumns;
 
-/**
- *
- *
- */
+import java.io.Serializable;
 
-class DBConfig {
+class DBConfig implements Serializable  {
 
-    static class UserData implements BaseColumns {
+    static class UserData implements BaseColumns{
         static final String TABLE_NAME = "userData";
         static final String STUDENT_ID = "student_id";
         static final String NAME = "name";

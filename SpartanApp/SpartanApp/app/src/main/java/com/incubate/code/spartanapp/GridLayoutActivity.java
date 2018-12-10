@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.os.Bundle;
@@ -12,9 +13,9 @@ public class GridLayoutActivity extends AppCompatActivity {
     private GridLayoutAdapter gridLayoutAdapter;
     private ArrayList<BeanClassGrid> beanClassGridArrayList;
 
-    private String[] TITLE = {"Shop","Work","Health","Travel","Bills","Auto","Shop","Work"};
-    private String[] SUB_TITLE = {"25 ITEMS","12 ITEMS","8 ITEMS","56 ITEMS","6 ITEMS","33 ITEMS","11 ITEMS","6 ITEMS"};
-    private String[] COLORS = {"#FF4081","#4cd2c7","#8284ab","#d7dafd","#faa75b","#f2c2ec","#ff527d","#4cd2c7","#8284ab"};
+    private String[] TITLE = {"Shop","Work","Health","Travel","Bills","Auto"};
+    private String[] SUB_TITLE = {"25 ITEMS","12 ITEMS","8 ITEMS","56 ITEMS","6 ITEMS","33 ITEMS"};
+    private String[] COLORS = {"#FF4081","#4cd2c7","#8284ab","#d7dafd","#faa75b","#f2c2ec","#ff527d"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

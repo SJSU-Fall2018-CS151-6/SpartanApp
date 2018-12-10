@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp.stackedchart;
 package com.incubate.code.spartanapp.stackedchart;
 
 import android.annotation.SuppressLint;
@@ -7,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Build;
 import android.support.v7.widget.CardView;
+
 import com.db.chart.Tools;
 import com.db.chart.listener.OnEntryClickListener;
 import com.db.chart.model.BarSet;
@@ -18,11 +20,6 @@ import com.incubate.code.spartanapp.CardController;
 import com.incubate.code.spartanapp.R;
 
 
-/**
- *
- *
- *
- */
 public class StackedCardOne extends CardController {
 
 
@@ -39,9 +36,7 @@ public class StackedCardOne extends CardController {
             {15f, 12f, 25f, 40f, 2f, 30f, 40f, 30f, 3f, 25f, 25f, 25f},
             {30f, 3f, 25f, 25f, 20f, 25f, 25f, 30f, 4f, 25, 25, 4f} };
 
-    /**
-     *
-     */
+
     public StackedCardOne(CardView card){
         super(card);
 
@@ -51,9 +46,7 @@ public class StackedCardOne extends CardController {
 //        mLegendOneGreen = (TextView) card.findViewById(R.id.state_three);
     }
 
-    /**
-     *
-     */
+
     @Override
     public void show(Runnable action) {
         super.show(action);
@@ -145,9 +138,6 @@ public class StackedCardOne extends CardController {
     }
 
 
-    /**
-     *
-     */
     @Override
     public void update() {
         super.update();
@@ -164,9 +154,7 @@ public class StackedCardOne extends CardController {
         mChart.notifyDataUpdate();
     }
 
-    /**
-     *
-     */
+
     @Override
     public void dismiss(Runnable action) {
         super.dismiss(action);

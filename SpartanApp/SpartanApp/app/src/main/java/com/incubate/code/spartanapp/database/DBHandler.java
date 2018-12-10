@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp.database;
 package com.incubate.code.spartanapp.database;
 
 import android.content.ContentValues;
@@ -7,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import android.widget.Toast;
 
-
+//import com.wolfsoft.one.bronzeapp.login.Credentials;
 import com.incubate.code.spartanapp.login.Credentials;
 
 import java.io.Serializable;
@@ -15,35 +16,18 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * This class implement the database handler class
- *
- */
-
 public class DBHandler implements Runnable, Serializable {
 
     private Context context;
     private SQLiteDatabase databaseWrite;
     private SQLiteDatabase databaseRead;
 
-    /**
-     * Constructor class for DBHandler
-     * @param context
-     */
     public DBHandler(Context context){
         this.context = context;
         Thread thread = new Thread(this);
         thread.start();
     }
 
-    /**
-     * Create New user
-     * @param id
-     * @param name
-     * @param email
-     * @param password
-     * @param birthday
-     */
     public void newUser(String id, String name, String email, String password, String birthday) {
 
         ContentValues values = new ContentValues();
@@ -70,12 +54,7 @@ public class DBHandler implements Runnable, Serializable {
         Toast.makeText(context, "You signed up successfully", Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * Handel the Login process
-     * @param id
-     * @param password
-     * @return
-     */
+
     public Boolean precedeLogin(String id, String password) {
 
         String[] projection = {
@@ -126,9 +105,7 @@ public class DBHandler implements Runnable, Serializable {
         return false;
     }
 
-    /**
-     *
-     */
+
     @Override
     public void run() {
         databaseRead = new com.incubate.code.spartanapp.database.DBHelper(context).getReadableDatabase();

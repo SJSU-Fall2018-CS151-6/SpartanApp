@@ -1,4 +1,4 @@
-package com.incubate.code.spartanapp;
+package com.wolfsoft.one.spartanapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

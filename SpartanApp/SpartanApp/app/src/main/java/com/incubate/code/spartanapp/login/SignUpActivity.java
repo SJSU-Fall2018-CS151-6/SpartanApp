@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp.login;
 package com.incubate.code.spartanapp.login;
 
 import android.os.Bundle;
@@ -8,12 +9,6 @@ import android.widget.EditText;
 import com.incubate.code.spartanapp.R;
 import com.incubate.code.spartanapp.database.DBHandler;
 
-
-/**
- *
- *
- *
- */
 public class SignUpActivity extends AppCompatActivity {
 
     DBHandler dbHandler;
@@ -23,10 +18,7 @@ public class SignUpActivity extends AppCompatActivity {
     EditText textViewNewEmail;
     EditText textViewNewBirth;
 
-    /**
-     *
-     * @param savedInstanceState
-     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +31,6 @@ public class SignUpActivity extends AppCompatActivity {
         textViewNewBirth = (EditText) findViewById(R.id.textInputNewBirth);
     }
 
-    /**
-     *
-     * @param v
-     */
     public void signUp(View v){
         String id = textViewNewID.getText().toString();
         String email = textViewNewEmail.getText().toString();
@@ -55,10 +43,6 @@ public class SignUpActivity extends AppCompatActivity {
         onBackPressed();
     }
 
-    /**
-     *
-     * @param v
-     */
     public void goToSignIn(View v){
         finish();
     }
