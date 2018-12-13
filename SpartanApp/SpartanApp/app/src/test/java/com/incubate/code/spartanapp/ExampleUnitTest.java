@@ -1,4 +1,5 @@
 package com.incubate.code.spartanapp;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp.database;
 package com.incubate.code.spartanapp.database;
 
 import android.content.ContentValues;
@@ -7,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import android.widget.Toast;
 
-
+//import com.wolfsoft.one.bronzeapp.login.Credentials;
 import com.incubate.code.spartanapp.login.Credentials;
 
 import java.io.Serializable;
@@ -16,8 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * This class implement the database handler class
- *
+ * This class is for dealing with the database in a more abstract way
  */
 
 public class DBHandler implements Runnable, Serializable {
@@ -27,7 +27,7 @@ public class DBHandler implements Runnable, Serializable {
     private SQLiteDatabase databaseRead;
 
     /**
-     * Constructor class for DBHandler
+     * constructor
      * @param context
      */
     public DBHandler(Context context){
@@ -37,12 +37,13 @@ public class DBHandler implements Runnable, Serializable {
     }
 
     /**
-     * Create New user
-     * @param id
-     * @param name
-     * @param email
-     * @param password
-     * @param birthday
+     * for creating a new user into the database
+     *
+     * @param id the student id
+     * @param name the student name
+     * @param email the email of the user
+     * @param password the password for the login
+     * @param birthday the users birthday
      */
     public void newUser(String id, String name, String email, String password, String birthday) {
 
@@ -70,11 +71,13 @@ public class DBHandler implements Runnable, Serializable {
         Toast.makeText(context, "You signed up successfully", Toast.LENGTH_SHORT).show();
     }
 
+
     /**
-     * Handel the Login process
-     * @param id
-     * @param password
-     * @return
+     * for checking if the login date was correct
+     *
+     * @param id sutdent id
+     * @param password account password
+     * @return true for success and false failure
      */
     public Boolean precedeLogin(String id, String password) {
 
@@ -127,8 +130,9 @@ public class DBHandler implements Runnable, Serializable {
     }
 
     /**
-     *
+     * for running the opening of the databases in a thread
      */
+
     @Override
     public void run() {
         databaseRead = new com.incubate.code.spartanapp.database.DBHelper(context).getReadableDatabase();

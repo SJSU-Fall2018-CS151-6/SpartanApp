@@ -23,8 +23,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:src="@drawable/profile"
-        android:scaleType="fitXY"
+        android:src="@drawable/login_background"
+        android:scaleType="matrix"
         />
 
 
@@ -32,26 +32,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="32dp"
-            android:textColor="@color/white"
+            android:textColor="@color/spartanBlue"
+            android:id="@+id/barUserNameLable"
             android:text="Nicole James"
             android:paddingLeft="16dp"
-            android:layout_gravity="bottom"
+            android:layout_gravity="bottom|center"
             android:layout_marginBottom="52dp"
 
             />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
 
 
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/menu"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/sjsu_logo"
+                android:onClick="goHome"
+                android:gravity="left"/>
+
 
         <LinearLayout
             android:layout_width="0dp"
@@ -62,10 +68,6 @@
             android:orientation="horizontal">
 
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/search"/>
 
         </LinearLayout>
         </LinearLayout>
@@ -95,7 +97,7 @@
         android:layout_height="wrap_content"
         android:textSize="14dp"
         android:textColor="@color/FormTextColor"
-        android:text="FEBRUARY"
+        android:text="DECEMBER"
         android:paddingLeft="16dp"
 
         />
@@ -105,7 +107,7 @@
             android:layout_height="wrap_content"
             android:textSize="14dp"
             android:textColor="@color/lightTextColor"
-            android:text="2015"
+            android:text="2018"
             android:paddingLeft="16dp"
 
 
@@ -222,7 +224,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:textColor="@color/lightTextColor"
-                android:text="COMPLETED"
+                android:text="Exams"
                 android:layout_marginTop="4dp"
                 android:layout_gravity="center"/>
 
@@ -262,7 +264,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:textColor="@color/lightTextColor"
-                android:text="SNOOZED"
+                android:text="Assignments"
                 android:layout_marginTop="4dp"
                 android:layout_gravity="center"/>
 
@@ -303,7 +305,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:textColor="@color/lightTextColor"
-                android:text="OVERDUE"
+                android:text="Quzes"
                 android:layout_marginTop="4dp"
                 android:layout_gravity="center"/>
 

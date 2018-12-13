@@ -81,7 +81,7 @@
       <customfonts.MyTextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Add Title"
+          android:text="Add Event"
           android:textColor="@color/white"
           android:textSize="30dp"
           android:layout_marginTop="12dp"

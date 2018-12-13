@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp.login;
 package com.incubate.code.spartanapp.login;
 
 import android.os.Bundle;
@@ -8,12 +9,10 @@ import android.widget.EditText;
 import com.incubate.code.spartanapp.R;
 import com.incubate.code.spartanapp.database.DBHandler;
 
-
 /**
- *
- *
- *
+ * Activity to show the sign uop screen
  */
+
 public class SignUpActivity extends AppCompatActivity {
 
     DBHandler dbHandler;
@@ -23,10 +22,11 @@ public class SignUpActivity extends AppCompatActivity {
     EditText textViewNewEmail;
     EditText textViewNewBirth;
 
+
     /**
-     *
-     * @param savedInstanceState
+     * initializing the view
      */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +40,8 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param v
+     * Button clicked to go to the signup screen
+     * @param v the view that is calling
      */
     public void signUp(View v){
         String id = textViewNewID.getText().toString();
@@ -55,10 +55,6 @@ public class SignUpActivity extends AppCompatActivity {
         onBackPressed();
     }
 
-    /**
-     *
-     * @param v
-     */
     public void goToSignIn(View v){
         finish();
     }

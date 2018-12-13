@@ -1,10 +1,8 @@
-
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 /**
- *
- *
- *
+ * Created by one on 20/8/16.
  */
 public class List {
 

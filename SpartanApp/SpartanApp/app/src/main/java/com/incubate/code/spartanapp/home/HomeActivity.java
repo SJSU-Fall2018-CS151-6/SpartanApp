@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.incubate.code.spartanapp.EventActivity;
 import com.incubate.code.spartanapp.GraphActivity;
 import com.incubate.code.spartanapp.GridLayoutActivity;
 import com.incubate.code.spartanapp.ListOfAllAppActivity;
@@ -15,6 +16,11 @@ import com.incubate.code.spartanapp.R;
 import com.incubate.code.spartanapp.SettingsActivity;
 import com.incubate.code.spartanapp.course.CourseSchedule;
 import com.incubate.code.spartanapp.todo.ToDoActivity;
+
+/**
+ * Management activity
+ * for going to every other screen
+ */
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -57,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void gotToEvent(View v){
-        Intent intent = new Intent(getApplicationContext(), NavigationActivity.class);
+        Intent intent = new Intent(getApplicationContext(), EventActivity.class);
 
         startActivity(intent);
     }

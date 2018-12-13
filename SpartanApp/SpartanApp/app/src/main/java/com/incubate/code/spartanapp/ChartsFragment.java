@@ -1,5 +1,5 @@
 /*
- *
+ * Copyright 2015 Diogo Bernardino
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.os.Bundle;
@@ -28,7 +28,7 @@ import android.view.ViewGroup;
 
 import com.incubate.code.spartanapp.stackedchart.StackedCardOne;
 
-
+//import com.wolfsoft.one.bronzeapp.stackedchart.StackedCardOne;
 
 
 public class ChartsFragment extends Fragment {

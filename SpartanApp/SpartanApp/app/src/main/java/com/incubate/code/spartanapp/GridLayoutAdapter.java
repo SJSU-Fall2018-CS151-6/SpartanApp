@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.app.Activity;
@@ -12,12 +13,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-
+//import com.wolfsoft.one.spartanapp.R;
 
 /**
- *
- *
- *
+ * Created by zero on 6/11/15.
  */
 public class GridLayoutAdapter extends BaseAdapter {
 

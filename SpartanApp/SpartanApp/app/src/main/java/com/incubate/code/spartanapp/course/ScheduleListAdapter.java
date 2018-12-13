@@ -1,5 +1,5 @@
+//package com.wolfsoft.one.bronzeapp.course;
 package com.incubate.code.spartanapp.course;
-
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.incubate.code.spartanapp.R;
+
 import java.util.ArrayList;
 
 /**
- * This method will handel all the necessary activities for listing
- * course schedule also extends ArrayAdapter<Course>
- *
+ * This class is for connecting an arraylist of courses with the actual list
  */
 
 public class ScheduleListAdapter extends ArrayAdapter<Course> implements View.OnClickListener{
@@ -22,31 +22,36 @@ public class ScheduleListAdapter extends ArrayAdapter<Course> implements View.On
         private ArrayList<Course> dataSet;
         Context mContext;
 
-        // View lookup cache
-        private static class ViewHolder {
-            TextView textViewName;
-            TextView textViewTime;
-            TextView textViewRoom;
-            TextView textViewTeacher;
+    /**
+     *  This is a class that defines all the views for one row
+     */
+    // View lookup cache
+    private static class ViewHolder {
+        TextView textViewName;
+        TextView textViewTime;
+        TextView textViewRoom;
+        TextView textViewTeacher;
 
-            ImageView imageView;
-        }
+        ImageView imageView;
+    }
 
     /**
+     * Construncter
      *
-     * @param data
+     * @param data is the courses list to assign
      * @param context
      */
+
     public ScheduleListAdapter(ArrayList<Course> data, Context context) {
             super(context, R.layout.schedule_item, data);
             this.dataSet = data;
             this.mContext=context;
 
-        }
+    }
 
     /**
-     *
-      * @param v
+     * for taking an action, when someone is pressing an element of the list
+     * @param v the calling view
      */
     @Override
     public void onClick(View v) {
@@ -57,12 +62,14 @@ public class ScheduleListAdapter extends ArrayAdapter<Course> implements View.On
     }
 
     /**
+     * for the settup of the rows
      *
      * @param position
      * @param convertView
      * @param parent
-     * @return
+     * @return the view of each row
      */
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
@@ -85,12 +92,12 @@ public class ScheduleListAdapter extends ArrayAdapter<Course> implements View.On
 
         convertView.setTag(viewHolder);
 
-        Log.e("adapter", course.getCourseName());
-        viewHolder.textViewName.setText(course.getCourseName());
-        viewHolder.textViewTime.setText(course.getCourseTime());
-        viewHolder.textViewRoom.setText(course.getClassRoom());
+        Log.e("adapter", course.getName());
+        viewHolder.textViewName.setText(course.getName());
+        viewHolder.textViewTime.setText(course.getTime());
+        viewHolder.textViewRoom.setText(course.getRoom());
         viewHolder.textViewTeacher.setText(course.getTeacherName());
-        viewHolder.imageView.setImageDrawable(course.getCourseImage());
+        viewHolder.imageView.setImageDrawable(course.getImage());
 
         return convertView;
     }

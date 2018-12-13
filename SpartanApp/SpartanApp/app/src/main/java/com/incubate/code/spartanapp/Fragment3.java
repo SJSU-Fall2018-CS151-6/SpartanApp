@@ -1,3 +1,4 @@
+//package com.wolfsoft.one.bronzeapp;
 package com.incubate.code.spartanapp;
 
 import android.os.Bundle;
@@ -8,9 +9,7 @@ import android.view.ViewGroup;
 
 
 /**
- *
- *
- *
+ * Created by one on 20/8/16.
  */
 public class Fragment3 extends Fragment {
 
