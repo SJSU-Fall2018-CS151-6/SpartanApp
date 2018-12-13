@@ -10,6 +10,9 @@ import android.widget.TextView;
 import com.incubate.code.spartanapp.R;
 import java.util.ArrayList;
 
+/**
+ * this class defines how to connect an ArrayList of Assignments to an ListView(RecyclerView)
+ */
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
@@ -27,10 +30,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
+    /**
+     * Constructor
+     * @param data is a list of Assignments
+     */
     public RecyclerViewAdapter(ArrayList<Assignment> data) {
         this.data = data;
     }
 
+    /**
+     * creating each item of the list
+     * @return the set up of the rowView
+     */
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_row, parent, false);

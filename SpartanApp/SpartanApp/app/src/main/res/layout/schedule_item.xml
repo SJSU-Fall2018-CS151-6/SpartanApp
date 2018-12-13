@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="130dp"
     android:orientation="vertical">
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:columnCount="3"
-        android:rowCount="2"
+        android:columnCount="2"
+        android:rowCount="4"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:layout_margin="16dp">
@@ -20,13 +20,13 @@
             android:layout_height="460dp"
             android:src="@drawable/tomcruise"
             android:layout_margin="4dp"
-            android:layout_rowSpan="2"
+            android:layout_rowSpan="4"
             />
 
         <customfonts.MyTextView
             android:id="@+id/lectureName"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:textSize="13dp"
             android:textColor="@color/FormTextColor"
             android:text="Call with Ryan"
@@ -36,7 +36,7 @@
             />
 
         <customfonts.MyTextView
-            android:id="@+id/lectureTime"
+            android:id="@+id/lectureTeacher"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:textSize="13dp"
@@ -51,7 +51,7 @@
 
 
         <customfonts.MyTextView
-            android:id="@+id/lectureTeacher"
+            android:id="@+id/lectureRoom"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:textSize="13dp"
@@ -63,7 +63,7 @@
             />
 
         <customfonts.MyTextView
-            android:id="@+id/lectureRoom"
+            android:id="@+id/lectureTime"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:textSize="13dp"

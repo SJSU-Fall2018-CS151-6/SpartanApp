@@ -17,6 +17,11 @@ import com.incubate.code.spartanapp.SettingsActivity;
 import com.incubate.code.spartanapp.course.CourseSchedule;
 import com.incubate.code.spartanapp.todo.ToDoActivity;
 
+/**
+ * Management activity
+ * for going to every other screen
+ */
+
 public class HomeActivity extends AppCompatActivity {
 
     @Override

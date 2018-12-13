@@ -2,6 +2,10 @@ package com.incubate.code.spartanapp.todo;
 
 import java.util.TimerTask;
 
+/**
+ * A producer thread to get assignments posted
+ */
+
 public class CourseNotificationCreator extends TimerTask {
 
     private Integer assignmentCount = 0;

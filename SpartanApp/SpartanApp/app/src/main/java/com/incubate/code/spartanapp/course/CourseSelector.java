@@ -1,4 +1,4 @@
-//package com.wolfsoft.one.bronzeapp.course;
+
 package com.incubate.code.spartanapp.course;
 
 import android.content.Intent;
@@ -12,10 +12,15 @@ import com.incubate.code.spartanapp.R;
 
 import java.util.ArrayList;
 
-//import com.wolfsoft.one.spartanapp.R;
+/**
+ * The screen for seling classes to fit into your schedule
+ */
 
 public class CourseSelector extends AppCompatActivity {
 
+    /**
+     * setting up the Screen
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +50,10 @@ public class CourseSelector extends AppCompatActivity {
 
     }
 
+    /**
+     * Implementing the interface to have a wy to go to the homescreen
+     * @param v the calling view
+     */
     public void goBack(View v){
         finish();
     }

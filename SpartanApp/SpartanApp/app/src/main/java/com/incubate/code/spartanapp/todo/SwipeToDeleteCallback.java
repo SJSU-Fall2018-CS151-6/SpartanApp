@@ -15,6 +15,10 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import com.incubate.code.spartanapp.R;
 
+
+/**
+ * This Callback is for getting the ability of swiping elements to delete them
+ */
 abstract public class SwipeToDeleteCallback extends ItemTouchHelper.Callback {
 
     Context mContext;
@@ -25,6 +29,11 @@ abstract public class SwipeToDeleteCallback extends ItemTouchHelper.Callback {
     private int intrinsicWidth;
     private int intrinsicHeight;
 
+
+    /**
+     * Constructor
+     * @param context
+     */
 
     SwipeToDeleteCallback(Context context) {
         mContext = context;
@@ -50,13 +59,15 @@ abstract public class SwipeToDeleteCallback extends ItemTouchHelper.Callback {
         return false;
     }
 
+    /**
+     * drawing the movement
+     */
     @Override
     public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
         super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         View itemView = viewHolder.itemView;
         int itemHeight = itemView.getHeight();
 
-        //Log.e("dX ", Integer.toString((int) dX));
         boolean isCancelled = dX == 0 && !isCurrentlyActive;
 
         if (isCancelled) {

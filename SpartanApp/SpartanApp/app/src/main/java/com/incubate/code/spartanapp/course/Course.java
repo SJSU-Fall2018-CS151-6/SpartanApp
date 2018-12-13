@@ -8,6 +8,9 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+/**
+ *  This class is for encapsulating courses
+ */
 
 public class Course {
     private String name;
@@ -16,6 +19,15 @@ public class Course {
     private String teacherName;
     private Drawable image;
 
+    /**
+     * Constructor
+     *
+     * @param name of the course
+     * @param time when the course is taught
+     * @param room where the course is taught
+     * @param teacherName the name of the teacher
+     * @param image an picture of the teacher
+     */
     Course(String name, String time, String room, String teacherName, Drawable image) {
         this.name = name;
         this.time = time;
@@ -23,6 +35,12 @@ public class Course {
         this.teacherName = teacherName;
         this.image = image;
     }
+
+    /**
+     * constructor for initialising an empty course to extend the list by genering
+     * courses based on an index.
+     * @param i is the index you want to assign the course to
+     */
 
     Course(Integer i) {
         this.name = "lecture"+Integer.toString(i);
@@ -61,6 +79,12 @@ public class Course {
     public String getTeacherName() {
         return teacherName;
     }
+
+
+    /**
+     *
+     * @return the image of the teacher
+     */
 
     public Drawable getImage() {
         return image;

@@ -17,11 +17,19 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Activity to show all the courses you are taking
+ */
+
 public class CourseSchedule extends AppCompatActivity implements Behavior {
 
     ArrayList<Course> list = new ArrayList<>();
     ListView listView;
     ScheduleListAdapter adapter;
+
+    /**
+     * creating the view
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +44,10 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
         listView.setAdapter(adapter);
     }
 
+    /**
+     * for the button in the bottom right corner, when it is been pressed
+     * @param v the calling view
+     */
     public void addNewCourse(View v){
 
         Intent intent = new Intent(getApplicationContext(), CourseSelector.class);
@@ -43,6 +55,11 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
         startActivityForResult(intent, 11);
 
     }
+
+    /**
+     * For receiving the choice that has been made at the CourseSelector Activity
+     *
+     */
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -54,7 +71,7 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
 
                     AvailableCourses courses = new AvailableCourses(this);
 
-                    /*try {
+                    try {
                         Class<?> c = Class.forName("com.incubate.code.spartanapp.course.AvailableCourses");
 
                         Class[] type = { CourseSchedule.class };
@@ -72,7 +89,7 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
                         iae.printStackTrace();
                     }catch (InvocationTargetException ite){
                         ite.printStackTrace();
-                    }*/
+                    }
 
                     Course course = courses.getIndexOf(Integer.parseInt(returnValue));
                     adapter.add(course);
@@ -83,6 +100,11 @@ public class CourseSchedule extends AppCompatActivity implements Behavior {
             }
         }
     }
+
+    /**
+     * Implementing the interface to have a wy to go to the homescreen
+     * @param v the calling view
+     */
 
     @Override
     public void goHome(View v) {

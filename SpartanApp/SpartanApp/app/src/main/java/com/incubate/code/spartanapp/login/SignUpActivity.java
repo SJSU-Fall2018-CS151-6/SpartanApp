@@ -9,6 +9,10 @@ import android.widget.EditText;
 import com.incubate.code.spartanapp.R;
 import com.incubate.code.spartanapp.database.DBHandler;
 
+/**
+ * Activity to show the sign uop screen
+ */
+
 public class SignUpActivity extends AppCompatActivity {
 
     DBHandler dbHandler;
@@ -18,6 +22,10 @@ public class SignUpActivity extends AppCompatActivity {
     EditText textViewNewEmail;
     EditText textViewNewBirth;
 
+
+    /**
+     * initializing the view
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +39,10 @@ public class SignUpActivity extends AppCompatActivity {
         textViewNewBirth = (EditText) findViewById(R.id.textInputNewBirth);
     }
 
+    /**
+     * Button clicked to go to the signup screen
+     * @param v the view that is calling
+     */
     public void signUp(View v){
         String id = textViewNewID.getText().toString();
         String email = textViewNewEmail.getText().toString();

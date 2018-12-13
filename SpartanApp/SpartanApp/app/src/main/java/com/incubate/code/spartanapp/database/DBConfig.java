@@ -5,8 +5,15 @@ import android.provider.BaseColumns;
 
 import java.io.Serializable;
 
+/**
+ * this class is for defining all the tables that are in the database
+ */
+
 class DBConfig implements Serializable  {
 
+    /**
+     * the userData table definition
+     */
     static class UserData implements BaseColumns{
         static final String TABLE_NAME = "userData";
         static final String STUDENT_ID = "student_id";

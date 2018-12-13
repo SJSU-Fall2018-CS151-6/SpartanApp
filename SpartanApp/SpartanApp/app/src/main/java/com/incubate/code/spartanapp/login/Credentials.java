@@ -3,6 +3,10 @@ package com.incubate.code.spartanapp.login;
 
 import java.util.Date;
 
+/**
+ * for saving the login credentials to remain logged in
+ */
+
 public class Credentials {
     private static String userID;
     private static String userName;

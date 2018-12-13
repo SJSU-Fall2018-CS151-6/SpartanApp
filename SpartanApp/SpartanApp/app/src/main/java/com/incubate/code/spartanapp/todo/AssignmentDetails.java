@@ -5,6 +5,10 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 
+/**
+ * for giving a popup to show some more details for every Assignment in the list
+ */
+
 public class AssignmentDetails implements View.OnClickListener {
     Context context;
 

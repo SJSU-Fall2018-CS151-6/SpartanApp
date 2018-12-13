@@ -1,5 +1,9 @@
-//package com.wolfsoft.one.bronzeapp.todo;
+
 package com.incubate.code.spartanapp.todo;
+
+/**
+ * Encapsulating assignments
+ */
 
 public class Assignment {
     private String name;

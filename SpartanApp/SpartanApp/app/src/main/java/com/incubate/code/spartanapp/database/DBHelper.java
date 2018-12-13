@@ -7,6 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.io.Serializable;
 
+/**
+ * this class is for handling the db
+ */
+
 public class DBHelper extends SQLiteOpenHelper implements Serializable {
 
     private static final int DATABASE_VERSION = 1;

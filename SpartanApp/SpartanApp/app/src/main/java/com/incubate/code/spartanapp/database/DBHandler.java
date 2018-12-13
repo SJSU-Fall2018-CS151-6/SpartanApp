@@ -16,18 +16,35 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * This class is for dealing with the database in a more abstract way
+ */
+
 public class DBHandler implements Runnable, Serializable {
 
     private Context context;
     private SQLiteDatabase databaseWrite;
     private SQLiteDatabase databaseRead;
 
+    /**
+     * constructor
+     * @param context
+     */
     public DBHandler(Context context){
         this.context = context;
         Thread thread = new Thread(this);
         thread.start();
     }
 
+    /**
+     * for creating a new user into the database
+     *
+     * @param id the student id
+     * @param name the student name
+     * @param email the email of the user
+     * @param password the password for the login
+     * @param birthday the users birthday
+     */
     public void newUser(String id, String name, String email, String password, String birthday) {
 
         ContentValues values = new ContentValues();
@@ -55,6 +72,13 @@ public class DBHandler implements Runnable, Serializable {
     }
 
 
+    /**
+     * for checking if the login date was correct
+     *
+     * @param id sutdent id
+     * @param password account password
+     * @return true for success and false failure
+     */
     public Boolean precedeLogin(String id, String password) {
 
         String[] projection = {
@@ -105,6 +129,9 @@ public class DBHandler implements Runnable, Serializable {
         return false;
     }
 
+    /**
+     * for running the opening of the databases in a thread
+     */
 
     @Override
     public void run() {

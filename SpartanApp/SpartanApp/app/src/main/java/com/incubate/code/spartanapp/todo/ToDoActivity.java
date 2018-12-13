@@ -21,19 +21,23 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * This class defines the ToDoActivity, where all assignments are displayed
+ */
 
 public class ToDoActivity extends AppCompatActivity implements Behavior {
 
     Timer timer = new Timer();
     Timer timer2 = new Timer();
     TimerTask consumerThread;
-    ArrayList<String> list = new ArrayList<>();
-    ArrayAdapter<String> adapter;
     RecyclerView recyclerView;
     RecyclerViewAdapter mAdapter;
     ArrayList<Assignment> assignmentList = new ArrayList<>();
 
 
+    /**
+     * initializing the view
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,14 +73,22 @@ public class ToDoActivity extends AppCompatActivity implements Behavior {
             }
         };
 
-        enableSwipeToDeleteAndUndo();
 
     }
+
+    /**
+     * implementation of the interface to have a way to go to the homescreen
+     * @param v the calling view
+     */
     @Override
     public void goHome(View v) {
         onBackPressed();
     }
 
+    /**
+     * for starting the threads consumer, producer
+     * @param v button that has been clicked
+     */
     public void subscribe(View v){
         AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
         dlgAlert.setMessage("You subscribe now to course notifications");
@@ -102,32 +114,4 @@ public class ToDoActivity extends AppCompatActivity implements Behavior {
     }
 
 
-    private void enableSwipeToDeleteAndUndo() {
-        SwipeToDeleteCallback swipeToDeleteCallback = new SwipeToDeleteCallback(this) {
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-
-                    final int position = viewHolder.getAdapterPosition();
-                    mAdapter.removeItem(position);
-
-                    //Snackbar snackbar = Snackbar.make(, "Item was removed from the list.", Snackbar.LENGTH_LONG);
-                    /*snackbar.setAction("UNDO", new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-
-                            mAdapter.restoreItem(item, position);
-                            recyclerView.scrollToPosition(position);
-
-                        }
-                    });
-
-
-                    snackbar.setActionTextColor(Color.YELLOW);
-                    snackbar.show();*/
-                }
-        };
-
-        ItemTouchHelper itemTouchhelper = new ItemTouchHelper(swipeToDeleteCallback);
-        itemTouchhelper.attachToRecyclerView(recyclerView);
-    }
 }
